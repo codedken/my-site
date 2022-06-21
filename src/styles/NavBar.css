@@ -132,52 +132,11 @@
     display: none;
   }
 
-  .menu--icon{
-    visibility: hidden;
-    position: relative;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
-
-  .menu--icon::before{
-    position: absolute;
-    content: "";
-    width: 2rem;
-    height: 2px;
-    background: var(--menu-icon-color);
-    border-radius: 1px;
-    box-shadow: 0px 10px var(--menu-icon-color);
-    transform: translateY(-10px);
-    transition: 0.5s;
-  }
-  .menu--icon.active::before{
-    transform: rotate(-45deg);
-    box-shadow: 0 0 var(--menu-icon-color);
-  }
-
-  .menu--icon::after{
-    position: absolute;
-    content: "";
-    width: 2rem;
-    height: 2px;
-    background: var(--menu-icon-color);
-    border-radius: 1px;
-    transform: translateY(10px);
-    transition: 0.5s;
-  }
-
-
-  .menu--icon.active::after{
-    transform: rotate(45deg);
-  }
+ 
 
   @media screen and (max-width: 700px) {
     .nav--bar{
-      padding: 0 2rem;
+      padding: 0 1rem;
       height: 80px;
     }
 
@@ -188,8 +147,34 @@
     .nav--title{
       font-size: 1.5rem;
     }
+    
     .toggleBtn{
-      margin-right: 150px;
+      position: relative;
+      width: 3rem;
+      height: 1.5rem;
+      border-radius: 0.75rem;
+      margin-right: 5rem;
+      background: #fff;
+      cursor: pointer;
+      user-select: none;
+      transition: 0.5s;
+    }
+  
+    .toggleBtn::before{
+      content: "";
+      position: absolute;
+      top: 0.15rem;
+      right: 0.25rem;
+      width: 1.2rem;
+      height: 1.2rem;
+      border-radius: 50%;
+      background: var(--before);
+      transition: 0.5s;
+    }
+  
+    .toggleBtn.active::before{
+      left: 0.25rem;
+      transition: 0.5s;
     }
 
     .nav-contact-btn{
@@ -199,10 +184,10 @@
     .navigation{
       position: fixed;
       visibility: visible;
-      top: 15px;
-      right: 50px;
-      width: 100px;
-      height: 50px;
+      top: 20px;
+      right: 4px;
+      width: 80px;
+      height: 40px;
       display: flex;
       justify-content: space-between;
       transition: height 0.25s, width 0.25s;
@@ -211,7 +196,7 @@
     }
 
     .navigation.active{
-      width: 300px;
+      width: 250px;
       height: 400px;
       transition: width 0.25s, height 0.25s;
       transition-delay: 0s, 0.5s;
@@ -219,8 +204,8 @@
 
     .navigation .userBx{
       position: relative;
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       display: flex;
       align-items: center;
       overflow: hidden;
@@ -229,7 +214,7 @@
     }
 
     .navigation.active .userBx{
-        width: calc(100% - 50px);
+        width: calc(100% - 40px);
         transition: 0s;
         transition-delay: 0s;
     }
@@ -237,8 +222,8 @@
     .navigation .userBx .imgBx{
         position: relative;
         padding-top: 2px;
-        min-width: 50px;
-        height: 50px;
+        min-width: 40px;
+        height: 40px;
         border-radius: 50%;
         overflow: hidden;
     }
@@ -251,7 +236,45 @@
     }
 
     .menu--icon{
-      visibility: visible;
+      position: relative;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+  
+    .menu--icon::before{
+      position: absolute;
+      content: "";
+      width: 2rem;
+      height: 2px;
+      background: var(--menu-icon-color);
+      border-radius: 1px;
+      box-shadow: 0px 10px var(--menu-icon-color);
+      transform: translateY(-10px);
+      transition: 0.5s;
+    }
+    .menu--icon.active::before{
+      transform: rotate(-45deg);
+      box-shadow: 0 0 var(--menu-icon-color);
+    }
+  
+    .menu--icon::after{
+      position: absolute;
+      content: "";
+      width: 2rem;
+      height: 2px;
+      background: var(--menu-icon-color);
+      border-radius: 1px;
+      transform: translateY(10px);
+      transition: 0.5s;
+    }
+  
+  
+    .menu--icon.active::after{
+      transform: rotate(45deg);
     }
 
     .navigation .userBx .username{
@@ -267,7 +290,7 @@
         top: 60px;
         padding: 20px;
         width: 100%;
-        height: calc(100% - 50px);
+        height: calc(100% - 40px);
        
     }
     

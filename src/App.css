@@ -31,7 +31,7 @@
 
 @media screen and (max-width: 700px) {
   .other--section{
-    padding: 1rem 2rem;
+    padding: 1rem 0.5rem;
   }
   .footer--section small{
     font-size: 1rem;

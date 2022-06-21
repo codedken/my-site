@@ -10,7 +10,7 @@ function Skills({ theme, isDarkMode }) {
     <div className="skills-btn-content">
       {props.icon}
       <span
-        style={{ color: props.color, fontSize: "1.5rem", transition: "0.5s" }}
+        style={{ color: props.color, transition: "0.5s" }}
       >
         {props.text}
       </span>

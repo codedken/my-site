@@ -219,7 +219,7 @@
         width: 100%;
     }
     .email-subject-message{
-        padding: 0 2rem 2rem 2rem;
+        padding: 0 0.5rem 1rem 0.5rem;
     }
     .email-subject-message h3{
         font-size: 1rem;

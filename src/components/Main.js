@@ -15,19 +15,20 @@ function Main({ theme, isDarkMode }) {
       }}
     >
       <div className="text--section">
-        <div className="mobile-bg-circle"></div>
-        <div className="mobile-bg-smallcircle"></div>
-        <div
-          className="home-main-rounded-photo"
-          style={{
-            "--photo-bg-color": isDarkMode
-              ? theme.dark.bg
-              : theme.light.bg,
-            "--photo-b-color": isDarkMode ? "white" : "var(--primary-color)",
-          }}
-        >
-          <img className="rounded--chibuzor" src={photo} alt="chibuzor" />
+        <div className="mobile-photo-section">
+          <div className="mobile-bg-circle"></div>
+          <div className="mobile-bg-smallcircle"></div>
+          <div
+            className="home-main-rounded-photo"
+            style={{
+              "--photo-bg-color": isDarkMode ? theme.dark.bg : theme.light.bg,
+              "--photo-b-color": isDarkMode ? "white" : "var(--primary-color)",
+            }}
+          >
+            <img className="rounded--chibuzor" src={photo} alt="chibuzor" />
+          </div>
         </div>
+
         <div style={{ display: "flex", gap: "12px" }}>
           <h1
             style={{

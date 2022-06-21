@@ -32,6 +32,10 @@
     gap: 8px;
   }
 
+  .skills-btn-content span{
+    font-size: 1.5rem;
+  }
+
   .skills{
     display: flex;
     justify-content: center;
@@ -39,7 +43,7 @@
     width: 11.7rem;
     height: 6rem;
     cursor: pointer;
-    border-radius: 16px;
+    border-radius: 1rem;
     transition: 0.5s;
     box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.05), 8px 8px 15px rgba(0,0,0,0.3);
   }
@@ -78,6 +82,17 @@
     }
     .skills--section .title{
       font-size: 1.5rem;
+    }
+    .my-skills{
+      gap: 1rem;
+    }
+    .skills{
+      width: 9rem;
+      height: 5rem;
+      border-radius: 0.8rem;
+    }
+    .skills-btn-content span{
+      font-size: 1.2rem;
     }
     .skills.react{
       grid-column: 1/2;
