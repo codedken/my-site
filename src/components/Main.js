@@ -79,15 +79,8 @@ function Main({ theme, isDarkMode }) {
         <SocialLinks />
       </div>
       <div className="photo--section">
-        <div
-          style={{
-            position: "absolute",
-            left: "110px",
-            top: "60px",
-          }}
-        >
-          <Shape att={{ cl: "secondary--box" }} />
-        </div>
+        <Shape att={{ cl: "secondary--box" }} />
+
         <div
           style={{
             position: "absolute",

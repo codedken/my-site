@@ -63,9 +63,8 @@ function Projects({ theme, isDarkMode }) {
                           color: isDarkMode
                             ? theme.dark.textColor
                             : theme.light.textLightColor,
-                          fontSize: "1rem",
-                          transition: "0.5s",
                         }}
+                        className="project-btn-text"
                       >
                         {project.btnText}
                       </h6>
@@ -76,9 +75,6 @@ function Projects({ theme, isDarkMode }) {
                           color: isDarkMode
                             ? theme.dark.textColor
                             : theme.light.textLightColor,
-                          transition: "0.5s",
-                          width: "1.8rem",
-                          height: "1.8rem",
                         }}
                       />
                     </div>

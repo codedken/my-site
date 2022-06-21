@@ -40,7 +40,7 @@ function Articles({ theme, isDarkMode }) {
               <p className="article--desc">{article.body}</p>
               <div
                 style={{
-                  paddingBottom: "0.5rem",
+                  paddingBottom: "1rem",
                   position: "relative",
                   width: "100%",
                 }}
