@@ -1,0 +1,221 @@
+.home--main{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  padding: 100px 12rem 0px 12rem;
+}
+
+.home--main .text--section{
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+.home-main-rounded-photo{
+  display: none;
+}
+
+.home--main .text--section h1{
+  padding: 0;
+  margin: 0;
+  font-size: 2.6rem;
+  margin-top: 5.5rem;
+}
+.home--main .text--section h2{
+  color: var(--main-text-color);
+  font-size: 2.2rem;
+  padding: 0;
+  margin: 16px 0 24px 0;
+}
+
+.home--main .text--section .home-profile-desc{
+  color: var(--main-text-color);
+  opacity: 0.7;
+  font-size: 16px;
+  width: 300px;
+  font-weight: 500;
+  line-height: 28px;
+}
+.home--main .text--section .find-me-here{
+  margin: 0;
+  padding: 0;
+  margin-bottom: 8px;
+  margin-top: 40px;
+  opacity: 0.8;
+  font-size: 18px;
+  width: 300px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.main-social-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: var(--primary-color);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.social--links{
+  display: flex;
+  gap: 16px;
+}
+
+.social--links .icon--box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-text-color);
+  background: var(--primary-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.main-social-links:active{
+  background: var(--secondary-color)
+}
+
+.photo--section{
+  position: relative;
+  padding: 0 1rem;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+}
+
+.chibuzor{
+  width: 350px;
+  height: 800px;
+  top: -10px;
+  position: absolute;
+  right: 60px;
+  filter: saturate(150%) brightness(100%) contrast(130%);
+}
+
+.small-rounded-bg{
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  background: var(--primary-color);
+  border: 2px dashed white;
+  animation: animateSmallCircle 30s infinite linear;
+}
+@keyframes animateSmallCircle {
+  0%{
+    transform: rotate(-360deg);
+  }
+}
+
+.rounded--bg{
+  width: 400px;
+  height: 400px;
+  border-radius: 200px;
+  border: 2rem dashed rgba(255,255,255, 0.1);
+  background: var(--primary-color);
+  box-shadow: inset 4px 4px 10px var(--secondary-color),
+                inset -2rem 0px 20px rgba(255,255,255, 0.2);
+  animation: animateCircle 60s infinite linear;
+}
+@keyframes animateCircle {
+  0%{
+    transform: rotate(360deg);
+  }
+}
+.secondary--box{
+  width: 40px;
+  height: 400px;
+  border-radius: 4px;
+  background: var(--secondary-color);
+}
+
+@media (max-width: 700px){
+  .home--main{
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    padding: 80px 100px 0px 100px;
+  }
+  .home--main .text--section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+  }
+  .home-main-rounded-photo{
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    padding-top: 0.5rem;
+    overflow: hidden;
+    background-color: var(--photo-bg-color);
+    border: 3px solid var(--photo-b-color);
+    z-index: 50;
+  }
+  .rounded--chibuzor{
+    width: 150px;
+    height: 150px;
+    filter: saturate(150%) brightness(100%) contrast(130%);
+    object-fit: cover;
+    object-position: center top;
+  }
+  .mobile-bg-circle{
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background: var(--primary-color);
+    box-shadow: inset 4px 4px 15px var(--secondary-color),
+                inset -12px 0px 20px rgba(255,255,255, 0.2);
+    border: 0.8rem dashed rgba(255,255,255, 0.1);
+    animation: animateMobileBg 40s infinite linear;
+  }
+  @keyframes animateMobileBg {
+    0%{
+      transform: rotate(360deg);
+    }
+  }
+  .mobile-bg-smallcircle{
+    position: absolute;
+    top: 8rem;
+    left: 4rem;
+    width: 4rem;
+    height: 4rem;
+    background: var(--primary-color);
+    border-radius: 50%;
+    border: 1px dashed white;
+    animation: animateSmallMobileBg 30s infinite linear;
+  }
+  @keyframes animateSmallMobileBg {
+    0%{
+      transform: rotate(-360deg);
+    }
+  }
+  .home--main .text--section h1{
+    font-size: 1.8rem;
+    margin-top: 1rem;
+  }
+  .home--main .text--section h2{
+    white-space: nowrap;
+    font-size: 1.5rem;
+    margin: 8px 0 16px 0;
+  }
+  .home--main .text--section .home-profile-desc{
+    text-align: center;
+  }
+  .home--main .text--section .find-me-here{
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .photo--section{
+    display: none;
+  } 
+}
+

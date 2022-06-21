@@ -1,0 +1,133 @@
+.projects--section{
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects--section .header{
+    width: 100%;
+    display: flex;
+    margin-bottom: 3rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .leading--title{
+    font-size: 2rem;
+}
+.header a{
+    color: #08D0F9;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+.project--card{
+    width: 100%;
+    height: 15rem;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+    transition: 0.5s;
+    border-radius: 1rem;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.05), 8px 8px 15px rgba(0,0,0,0.3);
+}
+.github--link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 1rem;
+    right: 1rem;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.5s;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.05), 8px 8px 15px rgba(0,0,0,0.3);
+}
+.github--link:hover{
+    width: 58px;
+    height: 58px;
+}
+.project--box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0px;
+    right: 0;
+    width: 100%;
+    height: 4rem;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 1rem;
+    transition: 0.5s;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.05), 8px 8px 15px rgba(0,0,0,0.3);
+}
+
+
+.projects{
+    display: grid;
+    width: 100%;
+    gap: 3rem;
+    grid-template: auto auto/repeat(3, 1fr);
+}
+
+.project--title{
+    width: 75%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.project-brief-desc{
+    margin-top: 1.5rem;
+    margin-right: 1rem;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+   -webkit-line-clamp: 3;
+           line-clamp: 3; 
+   -webkit-box-orient: vertical;
+}
+
+.project--btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 0 1rem;
+}
+
+.project-btn-arrow{
+    transition: 0.5s;
+}
+
+.project--box:hover .project-btn-arrow{
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 8px 8px 15px rgba(0,0,0,0.6);
+    transform: translateX(-8px);
+    border-radius: 2px;
+    padding: 4px;
+}
+
+.project--box:active{
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 8px 8px 15px rgba(0,0,0,0.6);
+}
+
+@media screen and (max-width: 700px) {
+    .projects--section{
+        padding: 2rem 0;
+    }
+    .projects{
+        grid-template: auto auto/repeat(1, 1fr);
+    }
+    .header .leading--title{
+        font-size: 1.5rem;
+    }
+    .header a{
+        font-size: 1rem;
+    }
+    .project--title{
+        font-size: 1.4rem;
+    }
+}

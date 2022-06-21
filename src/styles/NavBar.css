@@ -1,0 +1,294 @@
+.nav--bar{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 100px;
+    height: 100px;
+    z-index: 1000;
+  }
+  
+  .nav--title{
+    color: var(--secondary-color);
+    opacity: 0.7;
+    font-size: 2rem;
+    margin-right: auto;
+  }
+  
+  .nav--menu{
+    position: relative;
+    display: flex;
+    margin-right: 2.5rem;
+  }
+  
+  .menu--item{
+    text-decoration: none;
+    font-size: 1rem;
+    transition: 0.5s;
+  }
+  .menu--list{
+    list-style: none;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+  .menu--list.active .menu--item{
+    position: relative;
+    opacity: 0.7;
+  }
+
+  
+  .indicator{
+    position: absolute;
+    width: 1rem;
+    left: 2rem;
+    bottom: -0.5rem;
+    height: 3px;
+    background: var(--secondary-color);
+    transition: 0.5s;
+    border-radius: 1.5px;
+  }
+
+  .menu--list:nth-child(1).active ~ .indicator{
+    transform: translateX(calc(5rem * 0));
+  }
+  .menu--list:nth-child(2).active ~ .indicator{
+    transform: translateX(calc(5rem * 1));
+  }
+  .menu--list:nth-child(3).active ~ .indicator{
+    transform: translateX(calc(5rem * 2));
+  }
+  .menu--list:nth-child(4).active ~ .indicator{
+    transform: translateX(calc(5rem * 3));
+  }
+  .menu--list:nth-child(5).active ~ .indicator{
+    transform: translateX(calc(5rem * 4));
+  }
+
+  .toggleBtn{
+    position: relative;
+    width: 4rem;
+    height: 2rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    background: #fff;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.5s;
+  }
+
+  .toggleBtn::before{
+    content: "";
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.75rem;
+    background: var(--before);
+    transition: 0.5s;
+  }
+
+  .toggleBtn.active::before{
+    left: 0.25rem;
+    transition: 0.5s;
+  }
+  
+  .nav-contact-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background: var(--secondary-color);
+    padding: 12px 16px;
+    border-radius: 0.5rem;
+    border: none;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: inset 4px -4px 5px rgba(0, 0, 0, 0.5),
+                inset -2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-contact-btn:active{
+    box-shadow: inset 2px -2px 5px rgba(0, 0, 0, 0.5),
+                inset -1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  .nav-contact-btn:hover{
+    opacity: 0.8;
+  }
+  
+  .nav-contact-btn-text{
+    padding: 0;
+    margin: 0;
+    margin-left: 8px;
+  }
+
+  .navigation{
+    visibility: hidden;
+    display: none;
+  }
+
+  .menu--icon{
+    visibility: hidden;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .menu--icon::before{
+    position: absolute;
+    content: "";
+    width: 2rem;
+    height: 2px;
+    background: var(--menu-icon-color);
+    border-radius: 1px;
+    box-shadow: 0px 10px var(--menu-icon-color);
+    transform: translateY(-10px);
+    transition: 0.5s;
+  }
+  .menu--icon.active::before{
+    transform: rotate(-45deg);
+    box-shadow: 0 0 var(--menu-icon-color);
+  }
+
+  .menu--icon::after{
+    position: absolute;
+    content: "";
+    width: 2rem;
+    height: 2px;
+    background: var(--menu-icon-color);
+    border-radius: 1px;
+    transform: translateY(10px);
+    transition: 0.5s;
+  }
+
+
+  .menu--icon.active::after{
+    transform: rotate(45deg);
+  }
+
+  @media screen and (max-width: 700px) {
+    .nav--bar{
+      padding: 0 2rem;
+      height: 80px;
+    }
+
+    .nav--menu{
+      display: none;
+    }
+
+    .nav--title{
+      font-size: 1.5rem;
+    }
+    .toggleBtn{
+      margin-right: 150px;
+    }
+
+    .nav-contact-btn{
+      display: none;
+    }
+
+    .navigation{
+      position: fixed;
+      visibility: visible;
+      top: 15px;
+      right: 50px;
+      width: 100px;
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      transition: height 0.25s, width 0.25s;
+      transition-delay: 0s, 0.5s;
+      overflow: hidden;
+    }
+
+    .navigation.active{
+      width: 300px;
+      height: 400px;
+      transition: width 0.25s, height 0.25s;
+      transition-delay: 0s, 0.5s;
+    }
+
+    .navigation .userBx{
+      position: relative;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      transition: 0.5s;
+      transition-delay: 0.25s;
+    }
+
+    .navigation.active .userBx{
+        width: calc(100% - 50px);
+        transition: 0s;
+        transition-delay: 0s;
+    }
+
+    .navigation .userBx .imgBx{
+        position: relative;
+        padding-top: 2px;
+        min-width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .navigation .userBx .imgBx img{
+        width: 100%;
+        height: 100%;
+        filter: saturate(180%) brightness(100%) contrast(150%);
+        object-fit: cover;
+    }
+
+    .menu--icon{
+      visibility: visible;
+    }
+
+    .navigation .userBx .username{
+      white-space: nowrap;
+      color: #333;
+      margin-left: 1rem;
+      font-size: 1em;
+      font-weight: 700;
+    }
+    
+    .navigation .menu{
+        position: absolute;
+        top: 60px;
+        padding: 20px;
+        width: 100%;
+        height: calc(100% - 50px);
+       
+    }
+    
+    .navigation .menu li{
+        margin: 1.5rem 0;
+        list-style: none;
+    }
+
+    .navigation .menu li:hover a{
+      color: var(--secondary-color);
+    }
+    
+    .navigation .menu li a{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 400;
+        gap: 1.5rem;
+        transition: 0.5s;
+        color: var(--acolor);
+    }
+    
+  }
