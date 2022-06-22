@@ -31,18 +31,19 @@ function Contact({ theme, isDarkMode }) {
 
   const sendMail = async (e) => {
     e.preventDefault();
+  
     setIsLoading(prevState => !prevState);
     try {
-      const response = await send(
+      await send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         inputData,
         EMAILJS_USER_ID
       );
       setInputData(initialInputData);
-      console.log("email sent successfully", response.status, response.text);
+      alert("email sent successfully")
     } catch (e) {
-      console.log("an error occured", e);
+      alert("An error occured. Email not sent");
     }
     setIsLoading(prevState => !prevState);
   };

@@ -86,8 +86,8 @@
       align-items: center;
     }
     .about-photo-box{
-      width: 300px;
-      height: 350px;
+      width: 290px;
+      height: 330px;
     }
     
     .champion{
@@ -103,14 +103,13 @@
     }
   
     .about-visit-my-portfolio{
-      margin-bottom: 0.7
-      rem;
+      margin-bottom: 0.7rem;
       letter-spacing: 1.2px;
     }
   
     .about--header{
       font-size: 1.3rem;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1rem;
     }
     
     .about-text-section p{

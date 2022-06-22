@@ -16,7 +16,7 @@ function MobileNav({ isDarkMode, theme, isMenuOpen, toggleMenu }) {
   return (
     <div
       style={{
-        background: isDarkMode ? theme.dark.primary : "white",
+        background: isDarkMode ? theme.dark.primary : theme.light.bg,
       }}
       className={`navigation ${isMenuOpen && "active"}`}
     >
