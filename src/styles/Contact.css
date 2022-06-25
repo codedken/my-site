@@ -158,7 +158,7 @@
     pointer-events: none;
     font-size: 1rem;
     color: rgba(0,0,0,0.5);
-    padding: 0.5rem;
+    padding: 0.5rem 0.5rem 0 0.5rem;
     border-radius: 4px;
     transition: 0.5s;
 }
@@ -264,7 +264,11 @@
     
     .contact-email-input{
         padding: 0.8rem 0;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+    }
+    .input--box input:valid ~ span,
+    .input--box input:focus ~ span{
+        transform: translateY(-1.5rem);
     }
     .contact-message-input{
         padding: 0.8rem;
@@ -282,6 +286,10 @@
     
     .message--box span{
         top: 1rem;
+    }
+    .contact-form-btn{
+        height: 3.5rem;
+        border-radius: 0.5rem;
     }
 }
 
@@ -305,5 +313,24 @@
     }
     .email-subject-message h3{
         font-size: 1rem;
+    }
+    .contact-email-input{
+        padding: 0.8rem 0;
+        font-size: 1rem;
+    }
+
+    .input--box input:valid ~ span,
+    .input--box input:focus ~ span{
+        transform: translateY(-1.45rem);
+        font-size: 0.8rem;
+    }
+    .contact-message-input{
+        height: 6rem;
+        font-size: 1rem;
+    }
+
+    .contact-form-btn{
+        height: 3.5rem;
+        border-radius: 0.5rem;
     }
 }

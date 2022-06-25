@@ -83,7 +83,7 @@
     content: "";
     position: absolute;
     top: 0.25rem;
-    right: 0.25rem;
+    left: 2.2rem;
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 0.75rem;
@@ -237,9 +237,9 @@
     
     .toggleBtn{
       position: relative;
-      width: 3rem;
-      height: 1.5rem;
-      border-radius: 0.75rem;
+      width: 3.2rem;
+      height: 1.6rem;
+      border-radius: 1.4rem;
       margin-right: 5rem;
       background: #fff;
       cursor: pointer;
@@ -250,17 +250,17 @@
     .toggleBtn::before{
       content: "";
       position: absolute;
-      top: 0.15rem;
-      right: 0.25rem;
-      width: 1.2rem;
-      height: 1.2rem;
+      top: 0.1rem;
+      left: 1.65rem;
+      width: 1.4rem;
+      height: 1.4rem;
       border-radius: 50%;
       background: var(--before);
       transition: 0.5s;
     }
   
     .toggleBtn.active::before{
-      left: 0.25rem;
+      left: 0.15rem;
       transition: 0.5s;
     }
 

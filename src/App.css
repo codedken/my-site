@@ -16,34 +16,31 @@
 
 .other--section{
   width: 100%;
-  padding: 4rem 8rem;
+  padding: 4rem 8rem 2rem 8rem;
 }
 
 .footer--section{
   display: flex;
   justify-content: center;
-  padding-top: 1rem;
+  padding-top: 2rem;
   
 }
 .footer--section small{
-  font-size: 1.2rem;
+  font-size: 0.9rem;
 }
 
 @media screen and (max-width: 1100px) {
   .other--section{
     padding: 1rem;
   }
-  .footer--section small{
-    font-size: 1rem;
+  .footer--section{
+    padding-top: 1rem;
   }
 }
 
 @media screen and (max-width: 650px) {
   .other--section{
     padding: 1rem 0.5rem;
-  }
-  .footer--section small{
-    font-size: 1rem;
   }
 }
 

@@ -79,26 +79,15 @@ function Main({ theme, isDarkMode }) {
         <SocialLinks />
       </div>
       <div className="photo--section">
-        <Shape att={{ cl: "secondary--box" }} />
+        <div className="photo-large-animated-bg">
+          <Shape att={{ 
+            cl: "secondary--box" }} />
+          <Shape att={{ 
+            cl: "rounded--bg" }} />
+          <Shape att={{ 
+            cl: "small-rounded-bg" }} />
+        </div>
 
-        <div
-          style={{
-            position: "absolute",
-            right: "0",
-            top: "60px",
-          }}
-        >
-          <Shape att={{ cl: "rounded--bg" }} />
-        </div>
-        <div
-          style={{
-            position: "absolute",
-            bottom: "90px",
-            left: "30px",
-          }}
-        >
-          <Shape att={{ cl: "small-rounded-bg" }} />
-        </div>
         <img className="chibuzor" src={photo} alt="chibuzor" />
       </div>
     </section>

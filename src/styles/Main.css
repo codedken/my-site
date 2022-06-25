@@ -87,6 +87,12 @@
   overflow: hidden;
 }
 
+.photo-large-animated-bg{
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+
 .chibuzor{
   width: 350px;
   height: 800px;
@@ -97,6 +103,8 @@
 }
 
 .small-rounded-bg{
+  position: absolute;
+  bottom: -4rem;
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -111,6 +119,9 @@
 }
 
 .rounded--bg{
+  position: absolute;
+  top: 2rem;
+  right: -4rem;
   width: 400px;
   height: 400px;
   border-radius: 50%;
@@ -127,8 +138,8 @@
 }
 .secondary--box{
   position: absolute;
-  top: 60px;
-  left: 110px;
+  top: 2.5rem;
+  left: 6rem;
   width: 40px;
   height: 250px;
   border-radius: 4px;
@@ -172,12 +183,18 @@
     margin-top: 1rem;
     font-size: 1rem;
   }
+
+  .photo-large-animated-bg{
+    width: 250px;
+    height: 250px;
+    position: relative;
+  }
   
   .chibuzor{
     width: 230px;
     height: 500px;
     top: 1rem;
-    right: 2.5rem;
+    left: 2.5rem;
   }
   
   .small-rounded-bg{
@@ -205,8 +222,7 @@
     align-items: center;
     position: relative;
     height: 100vh;
-    overflow-y: scroll;
-    overflow: scroll;
+    overflow: hidden;
     padding: 0rem 6.25rem 0rem 6.25rem;
   }
   .home--main .text--section{

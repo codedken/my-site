@@ -4,8 +4,8 @@ function Footer({theme, isDarkMode}) {
   return (
     <div className="footer--section">
       <small style={{
-          color: isDarkMode ? theme.dark.textColor : theme.light.textLightColor,
-      }}><b>CodedKen @ {new Date().getFullYear()}</b></small>
+          color: isDarkMode ? theme.dark.textColor : "rgba(0,0,0,0.6)",
+      }}>CodedKen {`\u{00A9}`} {new Date().getFullYear()}</small>
     </div>
   );
 }
