@@ -1,6 +1,6 @@
 import React from "react";
 
-import { FaGithub, FaLongArrowAltRight } from "react-icons/fa";
+import { FaGithub, FaLongArrowAltRight, FaGooglePlay } from "react-icons/fa";
 import ProjectModel from "../models/ProjectModel";
 import "../styles/Projects.css";
 import Shape from "../components/Shape";
@@ -58,6 +58,14 @@ function Projects({ theme, isDarkMode }) {
                   bg: isDarkMode ? theme.dark.primary : theme.light.bg,
                   child: (
                     <div className="project--btn">
+                      {project.btnText === "" ? <FaGooglePlay
+                      style={{
+                        fontSize: "1.5rem",
+                        color: isDarkMode
+                            ? theme.dark.textColor
+                            : theme.light.textLightColor,
+                      }}
+                       /> :
                       <h6
                         style={{
                           color: isDarkMode
@@ -67,16 +75,17 @@ function Projects({ theme, isDarkMode }) {
                         className="project-btn-text"
                       >
                         {project.btnText}
-                      </h6>
-
-                      <FaLongArrowAltRight
-                        className="project-btn-arrow"
-                        style={{
-                          color: isDarkMode
-                            ? theme.dark.textColor
-                            : theme.light.textLightColor,
-                        }}
-                      />
+                      </h6>}
+                      {project.btnText && (
+                        <FaLongArrowAltRight
+                          className="project-btn-arrow"
+                          style={{
+                            color: isDarkMode
+                              ? theme.dark.textColor
+                              : theme.light.textLightColor,
+                          }}
+                        />
+                      )}
                     </div>
                   ),
                 }}
