@@ -9,7 +9,7 @@
   }
   
   .logo{
-    width: 200px;
+    width: 12.5rem;
     padding-bottom: 8px;
     margin-right: auto;
   }
@@ -138,6 +138,10 @@
       padding: 0 1rem;
       height: 4rem;
     }
+
+    .logo{
+      width: 10.5rem;
+    }
     
     .nav--menu{
       margin-right: 0.5rem;
@@ -222,6 +226,10 @@
       height: 4rem;
     }
 
+    .logo{
+      width: 8.5rem;
+    }
+
     .nav--menu{
       display: none;
     }
@@ -231,7 +239,7 @@
       width: 3.2rem;
       height: 1.6rem;
       border-radius: 1.4rem;
-      margin-right: 5rem;
+      margin-right: 6rem;
       background: #fff;
       cursor: pointer;
       user-select: none;
@@ -327,11 +335,11 @@
       position: absolute;
       content: "";
       width: 2rem;
-      height: 2px;
+      height: 1px;
       background: var(--menu-icon-color);
       border-radius: 1px;
-      box-shadow: 0px 10px var(--menu-icon-color);
-      transform: translateY(-10px);
+      box-shadow: 0px 8px var(--menu-icon-color);
+      transform: translateY(-8px);
       transition: 0.5s;
     }
     .menu--icon.active::before{
@@ -343,10 +351,10 @@
       position: absolute;
       content: "";
       width: 2rem;
-      height: 2px;
+      height: 1px;
       background: var(--menu-icon-color);
       border-radius: 1px;
-      transform: translateY(10px);
+      transform: translateY(8px);
       transition: 0.5s;
     }
   

@@ -151,6 +151,7 @@
 @media screen and (max-width: 1100px) {
   .home--main{
     padding: 4rem 2rem 0px 2rem;
+    height: 100%;
   }
   
   .home-main-rounded-photo{
@@ -171,16 +172,16 @@
 
   .home--main .text--section h2{
     font-size: 1.2rem;
-    margin: 0.8rem 0;
+    margin: 0.4rem 0;
   }
   
   .home--main .text--section .home-profile-desc{
-    line-height: 1.5rem;
+    line-height: 1.2rem;
   }
 
   .home--main .text--section .find-me-here{
     margin-bottom: 0.25rem;
-    margin-top: 1rem;
+    margin-top: 0.3rem;
     font-size: 1rem;
   }
 
@@ -200,11 +201,13 @@
   .small-rounded-bg{
     width: 100px;
     height: 100px;
+    bottom: -20px;
   }
   
   .rounded--bg{
     width: 250px;
     height: 250px;
+    right: -40px;
   }
 
   .secondary--box{
@@ -237,11 +240,11 @@
     align-items: center;
     width: 150px;
     height: 150px;
-    border-radius: 50% 0 50% 50%;
+    border-radius: 50%;
     padding-top: 0.5rem;
     overflow: hidden;
     background-color: var(--photo-bg-color);
-    border: 3px solid var(--photo-b-color);
+    border: 2px solid var(--photo-b-color);
     z-index: 50;
   }
   .mobile-photo-section{
@@ -259,8 +262,8 @@
   }
   .mobile-bg-circle{
     position: absolute;
-    top: -2.8rem;
-    right: -2.8rem;
+    top: -1.5rem;
+    right: -1.5rem;
     width: 6rem;
     height: 6rem;
     border-radius: 50%;
@@ -292,12 +295,12 @@
     }
   }
   .home--main .text--section h1{
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-top: 1rem;
   }
   .home--main .text--section h2{
     white-space: nowrap;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin: 8px 0 16px 0;
   }
   .home--main .text--section .home-profile-desc{

@@ -27,7 +27,7 @@ function MobileNav({ isDarkMode, theme, isMenuOpen, toggleMenu }) {
         <div
           className="imgBx"
           style={{
-            border: `2px solid ${
+            border: `1px solid ${
               isDarkMode ? theme.dark.textColor : theme.light.textLightColor
             }`,
           }}
