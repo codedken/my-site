@@ -1,7 +1,7 @@
 .about--section{
     width: 100%;
     display: flex; 
-    padding: 4rem 0;
+    padding: 5.5rem 0 2rem 0;
   }
   
   .about-photo-section{
@@ -77,7 +77,7 @@
   @media screen and (max-width: 1100px) {
     .about--section{
       height: 100vh;
-      padding: 1rem 0;
+      padding: 4.2rem 0 1rem 0;
     }
     .about-photo-section{
       display: flex;
@@ -87,11 +87,13 @@
     .about-photo-box{
       width: 290px;
       height: 330px;
+      border-radius: 0.5rem;
     }
     
     .champion{
       width: calc(100% - 3rem);
       height: calc(100% - 3rem);
+      border-radius: 0.5rem;
     }
 
     .about-text-section{
@@ -119,6 +121,7 @@
     .download-cv-btn{
       padding: 1rem 2.2rem;
       margin-top: 0.5rem;
+      border-radius: 0.5rem;
     }
     .download-cv-btn:active{
       padding: 0.9rem 2.19rem;
@@ -130,7 +133,7 @@
 
   @media screen and (max-width: 650px) {
     .about--section{
-      padding: 2rem 0;
+      padding: 4.2rem 0 2rem 0;
       height: auto;
     }
     .about-photo-section{

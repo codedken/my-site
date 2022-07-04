@@ -1,5 +1,5 @@
 .contact--section{
-    padding: 4rem 0;
+    padding: 5.5rem 0 2rem 0;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -209,7 +209,11 @@
 
 @media screen and (max-width: 1100px) {
     .contact--section{
-        padding: 1rem 0;
+        padding: 4.2rem 0 1rem 0;
+    }
+
+    .contact-left-card{
+        border-radius: 0.5rem;
     }
     
     .contact--title{
@@ -219,6 +223,10 @@
     
     .contact--card{
         gap: 0.5rem;
+    }
+
+    .contact--image{
+        border-radius: 0.5rem 0.5rem 0 0;
     }
     
     .contact--info{
@@ -261,10 +269,15 @@
         width: 2.8rem;
         height: 2.8rem;
     }
+
+    .contact-right-card{
+        border-radius: 0.5rem;
+    }
     
     .contact-email-input{
         padding: 0.8rem 0;
         font-size: 1.2rem;
+        border-radius: 0.25rem;
     }
     .input--box input:valid ~ span,
     .input--box input:focus ~ span{
@@ -274,6 +287,7 @@
         padding: 0.8rem;
         height: 7rem;
         font-size: 1rem;
+        border-radius: 0.25rem;
     }
     
     .contact-input-fields{
@@ -297,7 +311,7 @@
 
 @media screen and (max-width: 650px) {
     .contact--section{
-        padding: 2rem 0;
+        padding: 4.2rem 0 2rem 0;
     }
     .contact--title{
         font-size: 1.5rem;
@@ -307,9 +321,13 @@
     }
     .contact-right-card{
         width: 100%;
+        border-radius: 0.5rem;
+    }
+    .contact-input-fields{
+        padding: 1.5rem 0;
     }
     .email-subject-message{
-        padding: 0 0.5rem 3rem 0.5rem;
+        padding: 0 1rem 3rem 1rem;
     }
     .email-subject-message h3{
         font-size: 1rem;

@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 import { FaGithub, FaLongArrowAltRight, FaGooglePlay } from "react-icons/fa";
 import ProjectModel from "../models/ProjectModel";
@@ -110,7 +111,7 @@ function Projects({ theme, isDarkMode }) {
         >
           My Projects
         </h2>
-        <a href="./index">Click to see all projects</a>
+        <Link className="link" to="/projects" >Click to see all projects</Link>
       </div>
       <div className="projects">{allProjects}</div>
     </section>

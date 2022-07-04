@@ -6,6 +6,9 @@
   --secondary-color: #ff014E;
   --max-width: 900px;
 }
+html{
+  scroll-behavior: smooth;
+}
 *{
   margin: 0;
   padding: 0;

@@ -4,14 +4,13 @@
     display: flex;
     align-items: center;
     padding: 0 6.25rem;
-    height: 6.25rem;
+    height: 5rem;
     z-index: 1000;
   }
   
-  .nav--title{
-    color: var(--secondary-color);
-    opacity: 0.7;
-    font-size: 2rem;
+  .logo{
+    width: 200px;
+    padding-bottom: 8px;
     margin-right: auto;
   }
   
@@ -139,10 +138,6 @@
       padding: 0 1rem;
       height: 4rem;
     }
-
-    .nav--title{
-      font-size: 1.5rem;
-    }
     
     .nav--menu{
       margin-right: 0.5rem;
@@ -231,10 +226,6 @@
       display: none;
     }
 
-    .nav--title{
-      font-size: 1.5rem;
-    }
-    
     .toggleBtn{
       position: relative;
       width: 3.2rem;

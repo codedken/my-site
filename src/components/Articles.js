@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "../styles/Articles.css";
 import Shape from "./Shape";
@@ -38,13 +39,7 @@ function Articles({ theme, isDarkMode }) {
             >
               <h3 className="article--title">{article.title}</h3>
               <p className="article--desc">{article.body}</p>
-              <div
-                style={{
-                  paddingBottom: "1rem",
-                  position: "relative",
-                  width: "100%",
-                }}
-              >
+              <div className="article--footer">
                 <Shape
                   att={{
                     cl: "article-read-btn",
@@ -73,7 +68,9 @@ function Articles({ theme, isDarkMode }) {
         >
           Articles
         </h2>
-        <a href="./index">Click to see all articles</a>
+        <Link className="link" to="/articles">
+          Click to see all articles
+        </Link>
       </div>
       <div className="all--articles">{articleElements}</div>
     </section>

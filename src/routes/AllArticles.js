@@ -2,7 +2,7 @@ import React from 'react'
 
 function AllArticles() {
   return (
-    <div>AllArticles</div>
+    <div></div>
   )
 }
 

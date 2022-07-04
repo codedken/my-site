@@ -1,15 +1,13 @@
 import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./App.css";
+
+import AllArticles from "./routes/AllArticles";
+import AllProjects from "./routes/AllProjects";
 import theme from "./constants/colors";
 import NavBar from "./components/NavBar";
-import Main from "./components/Main";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Articles from "./components/Articles";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import Home from "./components/Home";
 
 function App() {
   const [isDarkMode, setIsDartMode] = useState(true);
@@ -21,17 +19,6 @@ function App() {
     background: isDarkMode ? theme.dark.primary : theme.light.primary,
     transition: "0.5s",
   };
-  const thematicRule = (
-    <hr
-      style={{
-        width: "100%",
-        border: `1px solid ${
-          isDarkMode ? "#050004" : theme.light.textLightColor
-        }`,
-        alignSelf: "center",
-      }}
-    />
-  );
 
   return (
     <div className="body" style={bodyTheme}>
@@ -49,20 +36,16 @@ function App() {
         isMenuOpen={isMenuOpen}
         toggleMenu={toggleMenu}
       />
-      <Main theme={theme} isDarkMode={isDarkMode} />
-      <div className="other--section">
-        <About theme={theme} isDarkMode={isDarkMode} />
-        {thematicRule}
-        <Skills theme={theme} isDarkMode={isDarkMode} />
-        {thematicRule}
-        <Projects theme={theme} isDarkMode={isDarkMode} />
-        {thematicRule}
-        <Articles theme={theme} isDarkMode={isDarkMode} />
-        {thematicRule}
-        <Contact theme={theme} isDarkMode={isDarkMode} />
-        {thematicRule}
-        <Footer theme={theme} isDarkMode={isDarkMode} />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={<Home isDarkMode={isDarkMode} theme={theme} />}
+          />
+          <Route path="/articles" element={AllArticles} />
+          <Route path="/projects" element={AllProjects} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
