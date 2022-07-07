@@ -2,6 +2,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 
 import "../styles/NavBar.css";
 import Logo from "../images/logo.png";
+import CodedkenLogo from "../images/logo192.png";
 import MobileNav from "./MobileNav";
 
 function NavBar({ toggle, isDarkMode, theme, isMenuOpen, toggleMenu }) {
@@ -30,6 +31,7 @@ function NavBar({ toggle, isDarkMode, theme, isMenuOpen, toggleMenu }) {
         transition: "0.5s",
       }}
     >
+    <img src={CodedkenLogo} alt="codedken--logo" className="codedken--logo"/>
       <img src={Logo} alt="logo" className="logo" />
       <ul className="nav--menu">
         <li className="menu--list active">

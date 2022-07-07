@@ -6,11 +6,10 @@ import "./App.css";
 import AllArticles from "./routes/AllArticles";
 import AllProjects from "./routes/AllProjects";
 import theme from "./constants/colors";
-import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 
 function App() {
-  const [isDarkMode, setIsDartMode] = useState(true);
+  const [isDarkMode, setIsDartMode] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleTheme = () => setIsDartMode((prevState) => !prevState);
@@ -29,21 +28,41 @@ function App() {
           display: isMenuOpen ? "block" : "none",
         }}
       ></div>
-      <NavBar
-        toggle={toggleTheme}
-        isDarkMode={isDarkMode}
-        theme={theme}
-        isMenuOpen={isMenuOpen}
-        toggleMenu={toggleMenu}
-      />
+
       <BrowserRouter>
         <Routes>
           <Route
             path="/"
-            element={<Home isDarkMode={isDarkMode} theme={theme} />}
+            element={
+              <Home
+                isDarkMode={isDarkMode}
+                theme={theme}
+                toggleTheme={toggleTheme}
+                isMenuOpen={isMenuOpen}
+                toggleMenu={toggleMenu}
+              />
+            }
           />
-          <Route path="/articles" element={AllArticles} />
-          <Route path="/projects" element={AllProjects} />
+          <Route
+            path="/articles"
+            element={
+              <AllArticles
+                isDarkMode={isDarkMode}
+                theme={theme}
+                toggle={toggleTheme}
+              />
+            }
+          />
+          <Route
+            path="/projects"
+            element={
+              <AllProjects
+                isDarkMode={isDarkMode}
+                theme={theme}
+                toggle={toggleTheme}
+              />
+            }
+          />
         </Routes>
       </BrowserRouter>
     </div>

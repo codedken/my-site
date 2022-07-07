@@ -1,5 +1,6 @@
 import React from "react";
 
+import NavBar from "./NavBar";
 import Main from "./Main";
 import About from "./About";
 import Skills from "./Skills";
@@ -8,7 +9,7 @@ import Articles from "./Articles";
 import Contact from "./Contact";
 import Footer from "./Footer";
 
-function Home({isDarkMode, theme}) {
+function Home({isDarkMode, theme, toggleTheme, isMenuOpen, toggleMenu}) {
     const thematicRule = (
         <hr
           style={{
@@ -22,6 +23,13 @@ function Home({isDarkMode, theme}) {
       );
   return (
     <div>
+    <NavBar
+        toggle={toggleTheme}
+        isDarkMode={isDarkMode}
+        theme={theme}
+        isMenuOpen={isMenuOpen}
+        toggleMenu={toggleMenu}
+      />
       <Main theme={theme} isDarkMode={isDarkMode} />
       <div className="other--section">
         <About theme={theme} isDarkMode={isDarkMode} />
