@@ -50,6 +50,8 @@ function App() {
                 isDarkMode={isDarkMode}
                 theme={theme}
                 toggle={toggleTheme}
+                toggleMenu={toggleMenu}
+                isMenuOpen={isMenuOpen}
               />
             }
           />
@@ -60,6 +62,8 @@ function App() {
                 isDarkMode={isDarkMode}
                 theme={theme}
                 toggle={toggleTheme}
+                toggleMenu ={toggleMenu}
+                isMenuOpen = {isMenuOpen}
               />
             }
           />

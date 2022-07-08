@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import "../styles/Allprojects.css";
 import "../styles/Allarticles.css";
 import Logo from "../images/logo192.png";
-import MenuProfileImage from "../images/champion.png";
+import MobileNav from "../components/MobileNav";
 import Shape from "../components/Shape";
 import Footer from "../components/Footer";
 import ArticleModel from "../models/ArticleModel";
+import { IoDocumentTextOutline, IoHomeOutline } from "react-icons/io5";
 
-function AllArticles({ isDarkMode, theme, toggle }) {
+function AllArticles({ isDarkMode, theme, toggle, toggleMenu, isMenuOpen }) {
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   });
@@ -28,6 +29,26 @@ function AllArticles({ isDarkMode, theme, toggle }) {
       }}
     />
   );
+  const links = [
+    {
+      name: "Home",
+      href: "/",
+      icon: IoHomeOutline,
+    },
+    {
+      name: "Projects",
+      href: "/projects",
+      icon: IoDocumentTextOutline,
+    },
+  ];
+
+  const aColor = isDarkMode ? theme.dark.textColor : theme.light.textLightColor;
+  const allLinks = links.map(link => <li>
+    <Link className="a" style={{ "--acolor": aColor }} onClick={toggleMenu} to={link.href}>
+      {<link.icon />}
+      {link.name}
+    </Link>
+  </li>);
   const articleElements = ArticleModel.map((article) => (
     <Shape
       key={article.id}
@@ -107,15 +128,12 @@ function AllArticles({ isDarkMode, theme, toggle }) {
           onClick={toggle}
         ></div>
 
-        <img
-          src={MenuProfileImage}
-          alt="champion"
-          className="allprojects--photo"
-          style={{
-            "--allprojects-photo-outline": isDarkMode
-              ? theme.dark.textColor
-              : theme.dark.primary,
-          }}
+        <MobileNav
+          isDarkMode={isDarkMode}
+          theme={theme}
+          isMenuOpen={isMenuOpen}
+          toggleMenu={toggleMenu}
+          allLinks={allLinks}
         />
       </div>
       <section className="allarticles">{articleElements}</section>

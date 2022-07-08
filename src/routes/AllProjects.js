@@ -1,19 +1,41 @@
 import React, { useLayoutEffect } from "react";
 import { Link } from "react-router-dom";
+import {IoHomeOutline, IoBookOutline} from "react-icons/io5";
 
 import { FaLongArrowAltRight, FaGithub, FaGooglePlay } from "react-icons/fa";
 
 import Shape from "../components/Shape";
+import MobileNav from "../components/MobileNav";
 import ProjectModel from "../models/ProjectModel";
 import "../styles/Allprojects.css";
 import Logo from "../images/logo192.png";
-import MenuProfileImage from "../images/champion.png";
 import Footer from "../components/Footer";
 
-function AllProjects({ isDarkMode, theme, toggle }) {
+function AllProjects({ isDarkMode, theme, toggle, toggleMenu, isMenuOpen }) {
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   });
+  const links = [
+    {
+      name: "Home",
+      href: "/",
+      icon: IoHomeOutline,
+    },
+    {
+      name: "Articles",
+      href: "/articles",
+      icon: IoBookOutline,
+    },
+  ];
+
+  const aColor = isDarkMode ? theme.dark.textColor : theme.light.textLightColor;
+
+  const allLinks = links.map(link => <li>
+    <Link className="a" style={{ "--acolor": aColor }} onClick={toggleMenu} to={link.href}>
+      {<link.icon />}
+      {link.name}
+    </Link>
+  </li>);
   const linkColor = {
     color: isDarkMode ? theme.dark.textColor : theme.light.textColor,
     "--after": isDarkMode ? theme.dark.textColor : theme.light.textColor,
@@ -152,15 +174,12 @@ function AllProjects({ isDarkMode, theme, toggle }) {
           onClick={toggle}
         ></div>
 
-        <img
-          src={MenuProfileImage}
-          alt="champion"
-          className="allprojects--photo"
-          style={{
-            "--allprojects-photo-outline": isDarkMode
-              ? theme.dark.textColor
-              : theme.dark.primary,
-          }}
+        <MobileNav
+          isDarkMode={isDarkMode}
+          theme={theme}
+          isMenuOpen={isMenuOpen}
+          toggleMenu={toggleMenu}
+          allLinks = {allLinks}
         />
       </div>
       <section className="allprojects--section">

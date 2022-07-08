@@ -1,18 +1,8 @@
 import React from "react";
 
-import {
-  IoHomeOutline,
-  IoBookOutline,
-  IoInformationCircleOutline,
-  IoConstructOutline,
-  IoCallOutline,
-  IoDocumentTextOutline
-} from "react-icons/io5";
-
 import MenuProfileImage from "../images/champion.png";
 
-function MobileNav({ isDarkMode, theme, isMenuOpen, toggleMenu }) {
-  const aColor = isDarkMode ? theme.dark.textColor : theme.light.textLightColor;
+function MobileNav({ isDarkMode, theme, isMenuOpen, toggleMenu, allLinks }) {
   return (
     <div
       style={{
@@ -55,38 +45,7 @@ function MobileNav({ isDarkMode, theme, isMenuOpen, toggleMenu }) {
         onClick={toggleMenu}
         className={`menu--icon ${isMenuOpen && "active"}`}
       ></div>
-      <ul className="menu">
-        <li>
-          <a style={{ "--acolor": aColor }} onClick={toggleMenu}  href="#home">
-            <IoHomeOutline />Home
-          </a>
-        </li>
-        <li>
-          <a style={{ "--acolor": aColor }} onClick={toggleMenu} href="#projects">
-            <IoDocumentTextOutline />Projects
-          </a>
-        </li>
-        <li>
-          <a style={{ "--acolor": aColor }} onClick={toggleMenu} href="#skills">
-            <IoConstructOutline />Skills
-          </a>
-        </li>
-        <li>
-          <a style={{ "--acolor": aColor }} onClick={toggleMenu} href="#articles">
-            <IoBookOutline />Articles
-          </a>
-        </li>
-        <li>
-          <a style={{ "--acolor": aColor }} onClick={toggleMenu} href="#about">
-            <IoInformationCircleOutline /> About
-          </a>
-        </li>
-        <li>
-          <a style={{ "--acolor": aColor }} onClick={toggleMenu} href="#contact">
-            <IoCallOutline />Contact
-          </a>
-        </li>
-      </ul>
+      <ul className="menu">{allLinks}</ul>
     </div>
   );
 }

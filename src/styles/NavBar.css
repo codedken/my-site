@@ -189,18 +189,34 @@
     .menu--list:nth-child(5).active ~ .indicator{
       transform: translateX(calc(3.5rem * 4));
     }
-    
+    .toggleBtn{
+      width: 3.2rem;
+      height: 1.6rem;
+      border-radius: 1.4rem;
+    }
+  
+    .toggleBtn::before{
+      top: 0.1rem;
+      left: 1.65rem;
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+  
+    .toggleBtn.active::before{
+      left: 0.15rem;
+    }
+
     .nav-contact-btn{
       display: flex;
       justify-content: center;
       align-items: center;
       color: #ffffff;
       background: var(--secondary-color);
-      padding: 12px 16px;
+      padding: 10px 12px;
       border-radius: 0.5rem;
       border: none;
       font-family: "Ubuntu", sans-serif;
-      font-size: 0.9rem;
+      font-size: 0.7rem;
       font-weight: 700;
       cursor: pointer;
       box-shadow: inset 4px -4px 5px rgba(0, 0, 0, 0.5),
@@ -218,7 +234,7 @@
     .nav-contact-btn-text{
       padding: 0;
       margin: 0;
-      margin-left: 8px;
+      margin-left: 4px;
     }
   
     .navigation{
@@ -244,32 +260,7 @@
     }
 
     .toggleBtn{
-      position: relative;
-      width: 3.2rem;
-      height: 1.6rem;
-      border-radius: 1.4rem;
       margin-right: 6rem;
-      background: #fff;
-      cursor: pointer;
-      user-select: none;
-      transition: 0.5s;
-    }
-  
-    .toggleBtn::before{
-      content: "";
-      position: absolute;
-      top: 0.1rem;
-      left: 1.65rem;
-      width: 1.4rem;
-      height: 1.4rem;
-      border-radius: 50%;
-      background: var(--before);
-      transition: 0.5s;
-    }
-  
-    .toggleBtn.active::before{
-      left: 0.15rem;
-      transition: 0.5s;
     }
 
     .nav-contact-btn{
@@ -281,6 +272,7 @@
       visibility: visible;
       top: 10px;
       right: 0.5rem;
+      margin-left: 0.5rem;
       width: 80px;
       height: 40px;
       display: flex;
@@ -291,8 +283,8 @@
     }
 
     .navigation.active{
-      width: 250px;
-      height: 400px;
+      width: calc(100% - 1rem);
+      height: calc(100vh - 1rem);
       transition: width 0.25s, height 0.25s;
       transition-delay: 0s, 0.5s;
     }
