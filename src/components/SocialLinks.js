@@ -29,7 +29,7 @@ function SocialLinks() {
         "https://www.linkedin.com/in/chibuzor-ojukwu-6606a7b5/"
       )}
       {icon(FaBehance, "https://www.behance.net/codedken?")}
-      {icon(FaTwitter, "https://www.twitter.com/codedken1")}
+      {icon(FaTwitter, "https://www.twitter.com/kenbuzor")}
     </div>
   );
 }

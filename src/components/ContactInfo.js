@@ -69,7 +69,7 @@ function ContactInfo({ isDarkMode, theme }) {
               </div>
               <div className="contact--socials">
                 <a
-                  href="https://www.twitter.com/codedken1"
+                  href="https://www.twitter.com/kenbuzor"
                   target="_blank"
                   rel="noreferrer"
                 >
