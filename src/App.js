@@ -9,7 +9,7 @@ import theme from "./constants/colors";
 import Home from "./components/Home";
 
 function App() {
-  const [isDarkMode, setIsDartMode] = useState(false);
+  const [isDarkMode, setIsDartMode] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleTheme = () => setIsDartMode((prevState) => !prevState);
