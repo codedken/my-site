@@ -78,13 +78,14 @@ function About({ theme, isDarkMode }) {
           style={{
             background: isDarkMode ? theme.dark.primary : theme.light.bg,
             boxShadow: `${isDarkMode
-                ? "-8px -8px 15px rgba(255, 255, 255, 0.05), 8px 8px 15px rgba(0,0,0,0.3)"
-                : "inset -8px -8px 7px rgba(0, 0, 0, 0.2), inset 2px 2px 4px rgba(0, 0, 0, 0.2)"
+              ? "-8px -8px 15px rgba(255, 255, 255, 0.05), 8px 8px 15px rgba(0,0,0,0.3)"
+              : "inset -8px -8px 7px rgba(0, 0, 0, 0.2), inset 2px 2px 4px rgba(0, 0, 0, 0.2)"
               }`,
           }}
           className="download-cv-btn"
         >
           <a
+            href="/"
             // href="https://drive.google.com/file/d/1eimrgM-Aom9TG_iol7rAxPdhTEXc7TDt/view?usp=sharing"
             rel="noreferrer"
             target="_blank"
