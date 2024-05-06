@@ -13,9 +13,8 @@ function About({ theme, isDarkMode }) {
             att={{
               cl: "about-photo-box",
               bg: isDarkMode ? theme.dark.primary : theme.light.bg,
-              bs: `-7px -7px 30px rgba(0,0,0, 0.3), 7px 7px 30px ${
-                isDarkMode ? "rgba(0,0,0, 0.3)" : theme.light.bg
-              }`,
+              bs: `-7px -7px 30px rgba(0,0,0, 0.3), 7px 7px 30px ${isDarkMode ? "rgba(0,0,0, 0.3)" : theme.light.bg
+                }`,
               child: (
                 <img
                   src={Photo}
@@ -78,19 +77,18 @@ function About({ theme, isDarkMode }) {
         <button
           style={{
             background: isDarkMode ? theme.dark.primary : theme.light.bg,
-            boxShadow: `${
-              isDarkMode
+            boxShadow: `${isDarkMode
                 ? "-8px -8px 15px rgba(255, 255, 255, 0.05), 8px 8px 15px rgba(0,0,0,0.3)"
                 : "inset -8px -8px 7px rgba(0, 0, 0, 0.2), inset 2px 2px 4px rgba(0, 0, 0, 0.2)"
-            }`,
+              }`,
           }}
           className="download-cv-btn"
         >
           <a
-            href="https://drive.google.com/file/d/1eimrgM-Aom9TG_iol7rAxPdhTEXc7TDt/view?usp=sharing"
+            // href="https://drive.google.com/file/d/1eimrgM-Aom9TG_iol7rAxPdhTEXc7TDt/view?usp=sharing"
             rel="noreferrer"
             target="_blank"
-            style={{textDecoration: "none"}}
+            style={{ textDecoration: "none" }}
           >
             <span className="cv-download-text">DOWNLOAD MY CV</span>
           </a>

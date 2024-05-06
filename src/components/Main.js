@@ -80,12 +80,15 @@ function Main({ theme, isDarkMode }) {
       </div>
       <div className="photo--section">
         <div className="photo-large-animated-bg">
-          <Shape att={{ 
-            cl: "secondary--box" }} />
-          <Shape att={{ 
-            cl: "rounded--bg" }} />
-          <Shape att={{ 
-            cl: "small-rounded-bg" }} />
+          <Shape att={{
+            cl: "secondary--box"
+          }} />
+          <Shape att={{
+            cl: "rounded--bg"
+          }} />
+          <Shape att={{
+            cl: "small-rounded-bg"
+          }} />
         </div>
 
         <img className="chibuzor" src={photo} alt="chibuzor" />
