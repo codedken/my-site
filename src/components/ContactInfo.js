@@ -47,10 +47,10 @@ function ContactInfo({ isDarkMode, theme }) {
             />
             <div className="contact--info">
               <h3 style={textColor.white} className="contact--name">
-                KENNEDY OJUKWU
+                KENNEDY OJUKWU C
               </h3>
               <h4 style={textColor.warmWhite} className="contact--role">
-                Software Developer
+                DevOps Engineer
               </h4>
               <p style={textColor.warmWhite} className="contact--summary">
                 I am open for gigs. Hit me up via the following channels below

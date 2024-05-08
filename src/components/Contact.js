@@ -31,7 +31,7 @@ function Contact({ theme, isDarkMode }) {
 
   const sendMail = async (e) => {
     e.preventDefault();
-  
+
     setIsLoading(prevState => !prevState);
     try {
       await send(
@@ -50,9 +50,8 @@ function Contact({ theme, isDarkMode }) {
 
   const inputStyle = {
     background: theme.dark.textColor,
-    border: `1px solid ${
-      isDarkMode ? "transparent" : theme.light.textLightColor
-    }`,
+    border: `1px solid ${isDarkMode ? "transparent" : theme.light.textLightColor
+      }`,
     transition: "0.5s",
   };
 
@@ -135,7 +134,7 @@ function Contact({ theme, isDarkMode }) {
                   }}
                 >
                   <div
-                    style={{ 
+                    style={{
                       border: isLoading ? "2px solid white" : "none",
                       borderLeft: isLoading && "0px",
                       borderTop: isLoading && "0px",
@@ -144,7 +143,7 @@ function Contact({ theme, isDarkMode }) {
                       animation: isLoading && "animateLoader 1s infinite linear",
                       borderRadius: isLoading && "50%",
                       transition: "0.5s",
-                      color: theme.dark.secondary 
+                      color: theme.dark.secondary
                     }}
                     className="contact-btn-text-icon"
                   >

@@ -22,7 +22,7 @@ function About({ theme, isDarkMode }) {
                     background: isDarkMode ? "#050004" : theme.dark.primary,
                     filter: isDarkMode
                       ? "saturate(150%) brightness(75%) contrast(200%)"
-                      : "saturate(200%) brightness(100%) contrast(120%)",
+                      : "saturate(150%) brightness(75%) contrast(200%)",
                     transition: "0.5s",
                   }}
                   alt="chibuzor"
@@ -63,7 +63,7 @@ function About({ theme, isDarkMode }) {
             color: isDarkMode ? theme.dark.textColor : theme.light.textColor,
           }}
         >
-          I build sleek looking high performant web and mobile apps using some
+          I deploy and manage high perfomant scalable applications on the cloud using some
           of the best technologies.
         </p>
         <p
@@ -71,8 +71,8 @@ function About({ theme, isDarkMode }) {
             color: isDarkMode ? theme.dark.textColor : theme.light.textColor,
           }}
         >
-          I build with Reactjs, Nodejs, Flutter, Firebase, TailwindCSS. I also
-          do designs with Figma.
+          I provision, configure, and automate both cloud and on-premise infrastructures using tools like Terraform, Ansible,
+          Docker, Kubernetes, Jenkins. By the side, I build elegant web and mobile apps with Reactjs and flutter respectively.
         </p>
         <button
           style={{

@@ -21,8 +21,10 @@ function Main({ theme, isDarkMode }) {
           <div
             className="home-main-rounded-photo"
             style={{
-              "--photo-bg-color": isDarkMode ? theme.dark.bg : theme.light.bg,
-              "--photo-b-color": isDarkMode ? "white" : "var(--primary-color)",
+              // "--photo-bg-color": isDarkMode ? theme.dark.bg : theme.light.bg,
+              "--photo-bg-color": theme.dark.bg,
+              // "--photo-b-color": isDarkMode ? "white" : "var(--primary-color)",
+              "--photo-b-color": "white",
             }}
           >
             <img className="rounded--chibuzor" src={photo} alt="chibuzor" />
@@ -30,7 +32,7 @@ function Main({ theme, isDarkMode }) {
         </div>
 
         <div style={{ display: "flex", gap: "12px" }}>
-          <h1
+          {/* <h1
             style={{
               color: isDarkMode
                 ? theme.dark.textColor
@@ -39,15 +41,15 @@ function Main({ theme, isDarkMode }) {
             }}
           >
             Hi, I'm
-          </h1>
+          </h1> */}
           <h1
             style={{
               color: theme.dark.secondary,
-              textShadow: "0px -4px 4px rgba(255,255,255, .25)",
+              textShadow: "0px -4px 4px rgba(255,255,255,.5)",
               whiteSpace: "nowrap",
             }}
           >
-            Kennedy Ojukwu
+            Ken Ojukwu C.
           </h1>
         </div>
         <h2
@@ -57,7 +59,7 @@ function Main({ theme, isDarkMode }) {
               : theme.light.textLightColor,
           }}
         >
-          Software Developer
+          DevOps Engineer
         </h2>
         <p
           style={{
@@ -65,8 +67,7 @@ function Main({ theme, isDarkMode }) {
           }}
           className="home-profile-desc"
         >
-          I build elegant and beautiful stuffs on both web and mobile platforms
-          using magical tools.
+          I manage and automate stuffs in the cloud using some interesting tools and technologies
         </p>
         <p
           style={{
@@ -74,7 +75,7 @@ function Main({ theme, isDarkMode }) {
           }}
           className="find-me-here"
         >
-          FIND ME HERE
+          LET'S CONNECT
         </p>
         <SocialLinks />
       </div>

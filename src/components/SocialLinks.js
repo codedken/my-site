@@ -1,5 +1,5 @@
 import React from "react";
-import { FaBehance, FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 
 import Shape from "./Shape";
 
@@ -28,7 +28,6 @@ function SocialLinks() {
         FaLinkedinIn,
         "https://www.linkedin.com/in/chibuzor-ojukwu-6606a7b5/"
       )}
-      {icon(FaBehance, "https://www.behance.net/codedken?")}
       {icon(FaTwitter, "https://www.twitter.com/kenbuzor")}
     </div>
   );

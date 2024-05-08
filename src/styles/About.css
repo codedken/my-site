@@ -1,172 +1,188 @@
-.about--section{
-    width: 100%;
-    display: flex; 
-    padding: 5.5rem 0 2rem 0;
+.about--section {
+  width: 100%;
+  display: flex;
+  padding: 5.5rem 0 2rem 0;
+}
+
+.about-photo-section {
+  width: 50%;
+  position: relative;
+}
+
+.about-photo-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 430px;
+  height: 500px;
+  border-radius: 16px;
+  transition: 0.5s;
+}
+
+.champion {
+  width: 380px;
+  height: 440px;
+  border-radius: 16px;
+
+  z-index: 40;
+  box-shadow: -4px -4px 10px rgba(0, 0, 0, 0.3),
+    4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.about-text-section {
+  width: 50%;
+  padding: 3rem 0;
+}
+
+.about-visit-my-portfolio {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1.5px;
+}
+
+.about--header {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  letter-spacing: 1.5px;
+}
+
+.about-text-section p {
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+  font-family: "Karla", sans-serif;
+  letter-spacing: 0.9px;
+}
+
+.download-cv-btn {
+  padding: 1.3rem 2.5rem;
+  margin-top: 3rem;
+  border-radius: 1rem;
+  border: 1px solid transparent;
+  transition: 0.5s;
+  cursor: pointer;
+  user-select: none;
+}
+
+.download-cv-btn:active {
+  padding: 1.29rem 2.49rem;
+}
+
+.cv-download-text {
+  color: var(--secondary-color);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.download-cv-btn:hover .cv-download-text {
+  opacity: .9;
+}
+
+@media screen and (max-width: 1100px) {
+  .about--section {
+    height: 100%;
+    padding: 1rem 0 0 0;
   }
-  
-  .about-photo-section{
-    width: 50%;
-    position: relative;
-  }
-  
-  .about-photo-box{
-    position: relative;
+
+  .about-photo-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 430px;
-    height: 500px;
-    border-radius: 16px;
-    transition: 0.5s;
-  }
-  
-  .champion{
-    width: 380px;
-    height: 440px;
-    border-radius: 16px;
-    
-    z-index: 40;
-    box-shadow: -4px -4px 10px rgba(0,0,0,0.3),
-                4px 4px 10px rgba(0,0,0,0.3);
-  }
-  
-  .about-text-section{
-    width: 50%;
-    padding: 3rem 0;
   }
 
-  .about-visit-my-portfolio{
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-    letter-spacing: 1.5px;
+  .about-photo-box {
+    width: 230px;
+    height: 270px;
+    border-radius: 0.5rem;
   }
 
-  .about--header{
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    letter-spacing: 1.5px;
+  .champion {
+    width: calc(100% - 3rem);
+    height: calc(100% - 3rem);
+    border-radius: 0.5rem;
   }
-  
-  .about-text-section p{
+
+  .about-text-section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about-visit-my-portfolio {
+    margin-bottom: 0.5rem;
+    letter-spacing: 1.2px;
+    font-size: 0.8rem;
+  }
+
+  .about--header {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .about-text-section p {
     margin-bottom: 1rem;
-    line-height: 1.5rem;
-    font-family: "Karla", sans-serif;
-    letter-spacing: 0.9px;
-  }
-  .download-cv-btn{
-    padding: 1.3rem 2.5rem;
-    margin-top: 3rem;
-    border-radius: 1rem;
-    border: 1px solid transparent;
-    transition: 0.5s;
-    cursor: pointer;
-    user-select: none;
-  }
-  .download-cv-btn:active{
-    padding: 1.29rem 2.49rem;
-  }
-  .cv-download-text{
-    color: var(--secondary-color);
-    font-weight: bold;
-    font-size: 1rem;
-  }
-  .download-cv-btn:hover .cv-download-text{
-    opacity: .9;
+    font-size: 0.8rem;
+    line-height: 1rem;
   }
 
-  @media screen and (max-width: 1100px) {
-    .about--section{
-      height: 100%;
-      padding: 1rem 0 0 0;
-    }
-    .about-photo-section{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .about-photo-box{
-      width: 230px;
-      height: 270px;
-      border-radius: 0.5rem;
-    }
-    
-    .champion{
-      width: calc(100% - 3rem);
-      height: calc(100% - 3rem);
-      border-radius: 0.5rem;
-    }
-
-    .about-text-section{
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-  
-    .about-visit-my-portfolio{
-      margin-bottom: 0.5rem;
-      letter-spacing: 1.2px;
-      font-size: 0.8rem;
-    }
-  
-    .about--header{
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-    }
-    
-    .about-text-section p{
-      margin-bottom: 1rem;
-      font-size: 0.8rem;
-      line-height: 1rem;
-    }
-    .download-cv-btn{
-      padding: 1rem 2.2rem;
-      margin-top: 0.5rem;
-      border-radius: 0.5rem;
-    }
-    .download-cv-btn:active{
-      padding: 0.9rem 2.19rem;
-    }
-    .cv-download-text{
-      font-size: 0.9rem;
-    }
+  .download-cv-btn {
+    padding: 1rem 2.2rem;
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
   }
 
-  @media screen and (max-width: 650px) {
-    .about--section{
-      padding: 4.2rem 0 2rem 0;
-      height: auto;
-    }
-    .about-photo-section{
-      display: none;
-    }
-
-    .about-text-section{
-      width: 100%;
-      height: 100%;
-      display: flex;
-      padding: 0;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-    }
-    .about-visit-my-portfolio{
-      display: none;
-    }
-    .about--header{
-      font-size: 1.5rem;
-    }
-    .about-text-section p{
-      text-align: center;
-    }
-    .download-cv-btn{
-      padding: 1.1rem 2.3rem;
-      margin-top: 2rem;
-    }
-    .download-cv-btn:active{
-      padding: 1.09rem 2.29rem;
-    }
-    .cv-download-text{
-      font-size: 0.8rem;
-    }
+  .download-cv-btn:active {
+    padding: 0.9rem 2.19rem;
   }
+
+  .cv-download-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .about--section {
+    padding: 4.2rem 0 2rem 0;
+    height: auto;
+  }
+
+  .about-photo-section {
+    display: none;
+  }
+
+  .about-text-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .about-visit-my-portfolio {
+    display: none;
+  }
+
+  .about--header {
+    font-size: 1.5rem;
+  }
+
+  .about-text-section p {
+    text-align: center;
+  }
+
+  .download-cv-btn {
+    padding: 1.1rem 2.3rem;
+    margin-top: 2rem;
+  }
+
+  .download-cv-btn:active {
+    padding: 1.09rem 2.29rem;
+  }
+
+  .cv-download-text {
+    font-size: 0.8rem;
+  }
+}

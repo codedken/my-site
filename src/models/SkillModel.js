@@ -1,17 +1,29 @@
-import { FaReact, FaNode } from "react-icons/fa";
-import { SiFlutter, SiFirebase } from "react-icons/si";
-
-import FigmaLogo  from "../components/FigmaLogo";
+import { FaDocker, FaPython, FaJenkins } from "react-icons/fa";
+import { SiTerraform, SiKubernetes, SiAnsible, SiNodedotjs } from "react-icons/si";
 
 const SkillModel = [
   {
-    className: "react",
-    text: "React",
-    url: "https://www.reactjs.org",
+    className: "docker",
+    text: "Docker",
+    url: "https://docs.docker.com/",
     icon: (
-      <FaReact
+      <FaDocker
         style={{
           color: "#08D0F9",
+          width: "4rem",
+          height: "4rem",
+        }}
+      />
+    ),
+  },
+  {
+    className: "terraform",
+    text: "Terraform",
+    url: "https://developer.hashicorp.com/terraform/docs",
+    icon: (
+      <SiTerraform
+        style={{
+          color: "#7D3AEB",
           width: "3rem",
           height: "3rem",
         }}
@@ -19,13 +31,41 @@ const SkillModel = [
     ),
   },
   {
-    className: "flutter",
-    text: "Flutter",
-    url: "https://www.flutter.dev",
+    className: "python",
+    text: "Python",
+    url: "https://docs.python.org/3/",
     icon: (
-      <SiFlutter
+      <FaPython
         style={{
-          color: "#08D0F9",
+          color: "#3069DE",
+          width: "3rem",
+          height: "3rem",
+        }}
+      />
+    ),
+  },
+  {
+    className: "k8s",
+    text: "Kubernetes",
+    url: "https://kubernetes.io/docs/home/",
+    icon: (
+      <SiKubernetes
+        style={{
+          color: "#3069DE",
+          width: "3rem",
+          height: "3rem",
+        }}
+      />
+    ),
+  },
+  {
+    className: "ansible",
+    text: "Ansible",
+    url: "https://docs.ansible.com/",
+    icon: (
+      <SiAnsible
+        style={{
+          color: "#000",
           width: "3rem",
           height: "3rem",
         }}
@@ -34,37 +74,31 @@ const SkillModel = [
   },
   {
     className: "node",
-    text: "",
-    url: "https://www.nodejs.org",
+    text: "nodejs",
+    url: "https://nodejs.org/docs/latest/api/",
     icon: (
-        <FaNode
-          style={{
-            color: "#60b146",
-            width: "4rem",
-            height: "4rem",
-          }}
-        />
-      ),
+      <SiNodedotjs
+        style={{
+          color: "#509941",
+          width: "3rem",
+          height: "3rem",
+        }}
+      />
+    ),
   },
   {
-    className: "firebase",
-    text: "Firebase",
-    url: "https://firebase.google.com",
-    icon:(
-        <SiFirebase
-          style={{
-            color: "#FCCA3F",
-            width: "3rem",
-            height: "3rem",
-          }}
-        />
-      ),
-  },
-  {
-    className: "figma",
-    text: "Figma",
-    url: "https://www.figma.com",
-    icon:<FigmaLogo />,
+    className: "node",
+    text: "Jenkins",
+    url: "https://www.jenkins.io/doc/",
+    icon: (
+      <FaJenkins
+        style={{
+          color: "rgba(255, 255, 255, 0.6)",
+          width: "3rem",
+          height: "3rem",
+        }}
+      />
+    ),
   },
 ];
 

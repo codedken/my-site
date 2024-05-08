@@ -1,4 +1,4 @@
-const theme =  {
+const theme = {
     dark: {
         primary: "#212428",
         bg: "#050004",

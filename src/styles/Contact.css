@@ -1,4 +1,4 @@
-.contact--section{
+.contact--section {
     padding: 5.5rem 0 2rem 0;
     display: flex;
     align-items: center;
@@ -6,69 +6,69 @@
     width: 100%;
 }
 
-.contact--title{
+.contact--title {
     font-size: 2rem;
     margin-bottom: 3rem;
 }
 
-.contact--card{
+.contact--card {
     display: flex;
     width: 100%;
     gap: 1rem;
 }
 
-.contact-left-card{
+.contact-left-card {
     width: 30%;
     border-radius: 1rem;
-    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.05), 8px 8px 15px rgba(0,0,0,0.3);
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.05), 8px 8px 15px rgba(0, 0, 0, 0.3);
 }
 
-.contact--info{
+.contact--info {
     padding: 2rem;
 }
 
-.contact--image{
+.contact--image {
     width: 100%;
     height: 100%;
     border-radius: 1rem 1rem 0 0;
     filter: saturate(200%) contrast(100%) brightness(50%);
 }
 
-.contact--name{
+.contact--name {
     margin-bottom: 0.4rem;
 }
 
-.contact--role{
+.contact--role {
     margin-bottom: 1rem;
     letter-spacing: 1px;
 }
 
-.contact--summary{
+.contact--summary {
     margin-bottom: 1.5rem;
     line-height: 1.5rem;
 }
 
-.contact-email-icon{
+.contact-email-icon {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     margin-bottom: 0.8rem;
 }
 
-.contact-phone-icon{
+.contact-phone-icon {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     margin-bottom: 2.5rem;
 }
 
-.contact--socials{
+.contact--socials {
     display: flex;
     justify-content: space-between;
     padding-top: 2rem;
 }
 
-.contact-info-icon{
+.contact-info-icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,23 +77,24 @@
     border-radius: 50%;
     transition: 0.5s;
     cursor: pointer;
-    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.05), 8px 8px 15px rgba(0,0,0,0.3);
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.05), 8px 8px 15px rgba(0, 0, 0, 0.3);
 }
 
-.contact-info-icon:active{
-    box-shadow: -4px -4px 15px rgba(255, 255, 255, 0.05), 4px 4px 15px rgba(0,0,0,0.3);
+.contact-info-icon:active {
+    box-shadow: -4px -4px 15px rgba(255, 255, 255, 0.05), 4px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.contact-info-icon:hover{
-    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.3), 8px 8px 15px rgba(0,0,0,0.5);
+.contact-info-icon:hover {
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.3), 8px 8px 15px rgba(0, 0, 0, 0.5);
 }
 
-.contact-right-card{
+.contact-right-card {
     width: 70%;
     border-radius: 1rem;
-    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.05), 8px 8px 15px rgba(0,0,0,0.3);
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.05), 8px 8px 15px rgba(0, 0, 0, 0.3);
 }
-.contact-email-input{
+
+.contact-email-input {
     padding: 1rem 0;
     width: 100%;
     font-size: 1.2rem;
@@ -102,7 +103,8 @@
     text-indent: 1rem;
     border-radius: 0.5rem;
 }
-.contact-message-input{
+
+.contact-message-input {
     padding: 1rem;
     height: 10rem;
     font-size: 1.2rem;
@@ -112,64 +114,64 @@
     border-radius: 0.5rem;
 }
 
-.contact-input-fields{
+.contact-input-fields {
     position: relative;
     width: 100%;
     height: 100%;
     padding: 4rem 0;
 }
 
-.email-subject-message{
+.email-subject-message {
     padding: 0 4rem 4rem 4rem;
 }
 
-.input--box{
+.input--box {
     margin-bottom: 1.5rem;
     position: relative;
     display: flex;
     align-items: center;
 }
 
-.input--box input:valid ~ span,
-.input--box input:focus ~ span{
+.input--box input:valid~span,
+.input--box input:focus~span {
     transform: translateY(-1.8rem);
     font-size: 0.8rem;
 }
 
-.input--box span{
+.input--box span {
     position: absolute;
     left: 1rem;
     pointer-events: none;
     font-size: 1rem;
-    color: rgba(0,0,0,0.5);
+    color: rgba(0, 0, 0, 0.5);
     padding: 0.5rem;
     border-radius: 4px;
     transition: 0.5s;
 }
 
-.message--box{
+.message--box {
     position: relative;
 }
 
-.message--box span{
+.message--box span {
     position: absolute;
     left: 1rem;
     top: 1rem;
     pointer-events: none;
     font-size: 1rem;
-    color: rgba(0,0,0,0.5);
-    padding: 0.5rem 0.5rem 0 0.5rem;
+    color: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem;
     border-radius: 4px;
     transition: 0.5s;
 }
 
-.message--box textarea:valid ~ span,
-.message--box textarea:focus ~ span{
+.message--box textarea:valid~span,
+.message--box textarea:focus~span {
     transform: translateY(-2rem);
     font-size: 0.8rem;
 }
 
-.contact-form-btn{
+.contact-form-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -181,17 +183,18 @@
     border: none;
     transition: 0.5s;
     cursor: pointer;
-    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.05), 8px 8px 15px rgba(0,0,0,0.3);
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.05), 8px 8px 15px rgba(0, 0, 0, 0.3);
 }
 
-.contact-form-btn:hover .contact-btn-text-icon{
+.contact-form-btn:hover .contact-btn-text-icon {
     gap: 1.5rem;
 }
 
-.contact-form-btn:active{
-    box-shadow: -6px -6px 15px rgba(255, 255, 255, 0.2), 6px 6px 15px rgba(0,0,0,0.5);
+.contact-form-btn:active {
+    box-shadow: -6px -6px 15px rgba(255, 255, 255, 0.2), 6px 6px 15px rgba(0, 0, 0, 0.5);
 }
-.contact-btn-text-icon{
+
+.contact-btn-text-icon {
     display: flex;
     align-items: center;
     gap: 0.8rem;
@@ -200,7 +203,7 @@
 }
 
 @keyframes animateLoader {
-    0%{
+    0% {
         transform: rotate(-360deg);
     }
 }
@@ -208,100 +211,104 @@
 /*for tablets*/
 
 @media screen and (max-width: 1100px) {
-    .contact--section{
+    .contact--section {
         padding: 4.2rem 0 1rem 0;
     }
 
-    .contact-left-card{
+    .contact-left-card {
         border-radius: 0.5rem;
     }
-    
-    .contact--title{
+
+    .contact--title {
         font-size: 1.5rem;
         margin-bottom: 1rem;
     }
-    
-    .contact--card{
+
+    .contact--card {
         gap: 0.5rem;
     }
 
-    .contact--image{
+    .contact--image {
         border-radius: 0.5rem 0.5rem 0 0;
     }
-    
-    .contact--info{
+
+    .contact--info {
         padding: 1rem;
     }
-    
-    .contact--name{
+
+    .contact--name {
         font-size: 1rem;
     }
-    
-    .contact--role{
+
+    .contact--role {
         margin-bottom: 0.7rem;
         font-size: 0.8rem;
     }
-    
-    .contact--summary{
+
+    .contact--summary {
         margin-bottom: 1.2rem;
         line-height: 1.2rem;
         font-size: 0.8rem;
     }
 
-    .contact--email, .contact--phone{
+    .contact--email,
+    .contact--phone {
         font-size: 0.8rem;
     }
-    
-    .contact-email-icon{
+
+    .contact-email-icon {
         gap: 0.3rem;
     }
-    
-    .contact-phone-icon{
+
+    .contact-phone-icon {
         gap: 0.3rem;
         margin-bottom: 2rem;
     }
-    
-    .contact--socials{
+
+    .contact--socials {
         padding-top: 0rem;
     }
-    
-    .contact-info-icon{
+
+    .contact-info-icon {
         width: 2.8rem;
         height: 2.8rem;
     }
 
-    .contact-right-card{
+    .contact-right-card {
         border-radius: 0.5rem;
     }
-    
-    .contact-email-input{
+
+    .contact-email-input {
         padding: 0.8rem 0;
         font-size: 1.2rem;
         border-radius: 0.25rem;
     }
-    .input--box input:valid ~ span,
-    .input--box input:focus ~ span{
+
+    .input--box input:valid~span,
+    .input--box input:focus~span {
         transform: translateY(-1.5rem);
     }
-    .contact-message-input{
+
+    .contact-message-input {
         padding: 0.8rem;
         height: 7rem;
         font-size: 1rem;
         border-radius: 0.25rem;
     }
-    
-    .contact-input-fields{
+
+    .contact-input-fields {
         padding: 2rem 0;
     }
-    
-    .email-subject-message{
+
+    .email-subject-message {
         padding: 0 1rem 3rem 1rem;
     }
-    
-    .message--box span{
+
+    .message--box span {
         top: 1rem;
     }
-    .contact-form-btn{
+
+    .contact-form-btn {
         height: 3.5rem;
         border-radius: 0.5rem;
     }
@@ -310,44 +317,52 @@
 /*for mobile*/
 
 @media screen and (max-width: 650px) {
-    .contact--section{
+    .contact--section {
         padding: 4.2rem 0 2rem 0;
     }
-    .contact--title{
+
+    .contact--title {
         font-size: 1.5rem;
     }
-    .contact-left-card{
-       display: none;
+
+    .contact-left-card {
+        display: none;
     }
-    .contact-right-card{
+
+    .contact-right-card {
         width: 100%;
         border-radius: 0.5rem;
     }
-    .contact-input-fields{
+
+    .contact-input-fields {
         padding: 1.5rem 0;
     }
-    .email-subject-message{
+
+    .email-subject-message {
         padding: 0 1rem 3rem 1rem;
     }
-    .email-subject-message h3{
+
+    .email-subject-message h3 {
         font-size: 1rem;
     }
-    .contact-email-input{
+
+    .contact-email-input {
         padding: 0.8rem 0;
         font-size: 1rem;
     }
 
-    .input--box input:valid ~ span,
-    .input--box input:focus ~ span{
+    .input--box input:valid~span,
+    .input--box input:focus~span {
         transform: translateY(-1.45rem);
         font-size: 0.8rem;
     }
-    .contact-message-input{
+
+    .contact-message-input {
         height: 6rem;
         font-size: 1rem;
     }
 
-    .contact-form-btn{
+    .contact-form-btn {
         height: 3.5rem;
         border-radius: 0.5rem;
     }

@@ -1,52 +1,181 @@
-.nav--bar{
-    position: fixed;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0 6.25rem;
-    height: 5rem;
-    z-index: 1000;
-  }
-  
-  .codedken--logo{
-    width: 40px;
-    height: 40px;
-  }
-  .logo{
-    width: 12rem;
-    padding-bottom: 8px;
-    margin-right: auto;
-  }
-  
-  .nav--menu{
-    position: relative;
-    display: flex;
-    margin-right: 2.5rem;
-  }
-  
-  .menu--item{
-    text-decoration: none;
-    font-size: 1rem;
-    transition: 0.5s;
-  }
-  .menu--list{
-    list-style: none;
-    width: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-  }
-  .menu--list.active .menu--item{
-    position: relative;
-    opacity: 0.7;
+.nav--bar {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 6.25rem;
+  height: 5rem;
+  z-index: 1000;
+}
+
+.codedken--logo {
+  width: 40px;
+  height: 40px;
+}
+
+.logo {
+  width: 12rem;
+  padding-bottom: 8px;
+  margin-right: auto;
+}
+
+.nav--menu {
+  position: relative;
+  display: flex;
+  margin-right: 2.5rem;
+}
+
+.menu--item {
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.5s;
+}
+
+.menu--list {
+  list-style: none;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.menu--list.active .menu--item {
+  position: relative;
+  opacity: 0.7;
+}
+
+
+.indicator {
+  position: absolute;
+  width: 1rem;
+  left: 2rem;
+  bottom: -0.5rem;
+  height: 3px;
+  background: var(--secondary-color);
+  transition: 0.5s;
+  border-radius: 1.5px;
+}
+
+.menu--list:nth-child(1).active~.indicator {
+  transform: translateX(calc(5rem * 0));
+}
+
+.menu--list:nth-child(2).active~.indicator {
+  transform: translateX(calc(5rem * 1));
+}
+
+.menu--list:nth-child(3).active~.indicator {
+  transform: translateX(calc(5rem * 2));
+}
+
+.menu--list:nth-child(4).active~.indicator {
+  transform: translateX(calc(5rem * 3));
+}
+
+.menu--list:nth-child(5).active~.indicator {
+  transform: translateX(calc(5rem * 4));
+}
+
+.toggleBtn {
+  position: relative;
+  width: 4rem;
+  height: 2rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  background: #fff;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.5s;
+}
+
+.toggleBtn::before {
+  content: "";
+  position: absolute;
+  top: 0.25rem;
+  left: 2.2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.75rem;
+  background: var(--before);
+  transition: 0.5s;
+}
+
+.toggleBtn.active::before {
+  left: 0.25rem;
+  transition: 0.5s;
+}
+
+.nav-contact-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background: var(--secondary-color);
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: inset 4px -4px 5px rgba(0, 0, 0, 0.5),
+    inset -2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.nav-contact-btn:active {
+  box-shadow: inset 2px -2px 5px rgba(0, 0, 0, 0.5),
+    inset -1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.nav-contact-btn:hover {
+  opacity: 0.8;
+}
+
+.nav-contact-btn-text {
+  padding: 0;
+  margin: 0;
+  margin-left: 0.5rem;
+}
+
+.navigation {
+  visibility: hidden;
+  display: none;
+}
+
+/*for tablets view*/
+
+@media screen and (max-width: 1100px) {
+  .nav--bar {
+    padding: 0 1rem;
+    height: 4rem;
   }
 
-  
-  .indicator{
+  .codedken--logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .logo {
+    width: 10.5rem;
+  }
+
+  .nav--menu {
+    margin-right: 0.5rem;
+  }
+
+  .menu--item {
+    font-size: 0.8rem;
+  }
+
+  .menu--list {
+    width: 3.5rem;
+  }
+
+  .indicator {
     position: absolute;
     width: 1rem;
-    left: 2rem;
+    left: 1.2rem;
     bottom: -0.5rem;
     height: 3px;
     background: var(--secondary-color);
@@ -54,353 +183,238 @@
     border-radius: 1.5px;
   }
 
-  .menu--list:nth-child(1).active ~ .indicator{
-    transform: translateX(calc(5rem * 0));
-  }
-  .menu--list:nth-child(2).active ~ .indicator{
-    transform: translateX(calc(5rem * 1));
-  }
-  .menu--list:nth-child(3).active ~ .indicator{
-    transform: translateX(calc(5rem * 2));
-  }
-  .menu--list:nth-child(4).active ~ .indicator{
-    transform: translateX(calc(5rem * 3));
-  }
-  .menu--list:nth-child(5).active ~ .indicator{
-    transform: translateX(calc(5rem * 4));
+  .menu--list:nth-child(1).active~.indicator {
+    transform: translateX(calc(3.5rem * 0));
   }
 
-  .toggleBtn{
-    position: relative;
-    width: 4rem;
-    height: 2rem;
-    border-radius: 1rem;
-    margin-right: 1rem;
-    background: #fff;
-    cursor: pointer;
-    user-select: none;
-    transition: 0.5s;
+  .menu--list:nth-child(2).active~.indicator {
+    transform: translateX(calc(3.5rem * 1));
   }
 
-  .toggleBtn::before{
-    content: "";
-    position: absolute;
-    top: 0.25rem;
-    left: 2.2rem;
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 0.75rem;
-    background: var(--before);
-    transition: 0.5s;
+  .menu--list:nth-child(3).active~.indicator {
+    transform: translateX(calc(3.5rem * 2));
   }
 
-  .toggleBtn.active::before{
-    left: 0.25rem;
-    transition: 0.5s;
+  .menu--list:nth-child(4).active~.indicator {
+    transform: translateX(calc(3.5rem * 3));
   }
-  
-  .nav-contact-btn{
+
+  .menu--list:nth-child(5).active~.indicator {
+    transform: translateX(calc(3.5rem * 4));
+  }
+
+  .toggleBtn {
+    width: 3.2rem;
+    height: 1.6rem;
+    border-radius: 1.4rem;
+  }
+
+  .toggleBtn::before {
+    top: 0.1rem;
+    left: 1.65rem;
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  .toggleBtn.active::before {
+    left: 0.15rem;
+  }
+
+  .nav-contact-btn {
     display: flex;
     justify-content: center;
     align-items: center;
     color: #ffffff;
     background: var(--secondary-color);
-    padding: 0.75rem 1rem;
+    padding: 10px 12px;
     border-radius: 0.5rem;
     border: none;
     font-family: "Ubuntu", sans-serif;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     font-weight: 700;
     cursor: pointer;
     box-shadow: inset 4px -4px 5px rgba(0, 0, 0, 0.5),
-                inset -2px 2px 5px rgba(0, 0, 0, 0.5);
+      inset -2px 2px 5px rgba(0, 0, 0, 0.5);
   }
 
-  .nav-contact-btn:active{
+  .nav-contact-btn:active {
     box-shadow: inset 2px -2px 5px rgba(0, 0, 0, 0.5),
-                inset -1px 1px 3px rgba(0, 0, 0, 0.5);
+      inset -1px 1px 3px rgba(0, 0, 0, 0.5);
   }
-  .nav-contact-btn:hover{
+
+  .nav-contact-btn:hover {
     opacity: 0.8;
   }
-  
-  .nav-contact-btn-text{
+
+  .nav-contact-btn-text {
     padding: 0;
     margin: 0;
-    margin-left: 0.5rem;
+    margin-left: 4px;
   }
 
-  .navigation{
+  .navigation {
     visibility: hidden;
     display: none;
   }
+}
 
-  /*for tablets view*/
+/*for mobile view*/
 
-  @media screen and (max-width: 1100px) {
-    .nav--bar{
-      padding: 0 1rem;
-      height: 4rem;
-    }
-
-    .codedken--logo{
-      width: 30px;
-      height: 30px;
-    }
-
-    .logo{
-      width: 10.5rem;
-    }
-    
-    .nav--menu{
-      margin-right: 0.5rem;
-    }
-    
-    .menu--item{
-      font-size: 0.8rem;
-    }
-    .menu--list{
-      width: 3.5rem;
-    }
-    
-    .indicator{
-      position: absolute;
-      width: 1rem;
-      left: 1.2rem;
-      bottom: -0.5rem;
-      height: 3px;
-      background: var(--secondary-color);
-      transition: 0.5s;
-      border-radius: 1.5px;
-    }
-  
-    .menu--list:nth-child(1).active ~ .indicator{
-      transform: translateX(calc(3.5rem * 0));
-    }
-    .menu--list:nth-child(2).active ~ .indicator{
-      transform: translateX(calc(3.5rem * 1));
-    }
-    .menu--list:nth-child(3).active ~ .indicator{
-      transform: translateX(calc(3.5rem * 2));
-    }
-    .menu--list:nth-child(4).active ~ .indicator{
-      transform: translateX(calc(3.5rem * 3));
-    }
-    .menu--list:nth-child(5).active ~ .indicator{
-      transform: translateX(calc(3.5rem * 4));
-    }
-    .toggleBtn{
-      width: 3.2rem;
-      height: 1.6rem;
-      border-radius: 1.4rem;
-    }
-  
-    .toggleBtn::before{
-      top: 0.1rem;
-      left: 1.65rem;
-      width: 1.4rem;
-      height: 1.4rem;
-    }
-  
-    .toggleBtn.active::before{
-      left: 0.15rem;
-    }
-
-    .nav-contact-btn{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #ffffff;
-      background: var(--secondary-color);
-      padding: 10px 12px;
-      border-radius: 0.5rem;
-      border: none;
-      font-family: "Ubuntu", sans-serif;
-      font-size: 0.7rem;
-      font-weight: 700;
-      cursor: pointer;
-      box-shadow: inset 4px -4px 5px rgba(0, 0, 0, 0.5),
-                  inset -2px 2px 5px rgba(0, 0, 0, 0.5);
-    }
-  
-    .nav-contact-btn:active{
-      box-shadow: inset 2px -2px 5px rgba(0, 0, 0, 0.5),
-                  inset -1px 1px 3px rgba(0, 0, 0, 0.5);
-    }
-    .nav-contact-btn:hover{
-      opacity: 0.8;
-    }
-    
-    .nav-contact-btn-text{
-      padding: 0;
-      margin: 0;
-      margin-left: 4px;
-    }
-  
-    .navigation{
-      visibility: hidden;
-      display: none;
-    }
+@media screen and (max-width: 650px) {
+  .nav--bar {
+    padding: 0 1rem;
+    height: 4rem;
   }
 
-  /*for mobile view*/
-
-  @media screen and (max-width: 650px) {
-    .nav--bar{
-      padding: 0 1rem;
-      height: 4rem;
-    }
-
-    .logo{
-      width: 8.5rem;
-    }
-
-    .nav--menu{
-      display: none;
-    }
-
-    .toggleBtn{
-      margin-right: 6rem;
-    }
-
-    .nav-contact-btn{
-      display: none;
-    }
-
-    .navigation{
-      position: fixed;
-      visibility: visible;
-      top: 10px;
-      right: 0.5rem;
-      margin-left: 0.5rem;
-      width: 80px;
-      height: 40px;
-      display: flex;
-      justify-content: space-between;
-      transition: height 0.25s, width 0.25s;
-      transition-delay: 0s, 0.5s;
-      overflow: hidden;
-    }
-
-    .navigation.active{
-      width: calc(100% - 1rem);
-      height: calc(100vh - 1rem);
-      transition: width 0.25s, height 0.25s;
-      transition-delay: 0s, 0.5s;
-    }
-
-    .navigation .userBx{
-      position: relative;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-      transition: 0.5s;
-      transition-delay: 0.25s;
-    }
-
-    .navigation.active .userBx{
-        width: calc(100% - 40px);
-        transition: 0s;
-        transition-delay: 0s;
-    }
-
-    .navigation .userBx .imgBx{
-        position: relative;
-        padding-top: 2px;
-        min-width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        overflow: hidden;
-    }
-
-    .navigation .userBx .imgBx img{
-        width: 100%;
-        height: 100%;
-        filter: saturate(180%) brightness(100%) contrast(150%);
-        object-fit: cover;
-    }
-
-    .menu--icon{
-      position: relative;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-    }
-  
-    .menu--icon::before{
-      position: absolute;
-      content: "";
-      width: 2rem;
-      height: 1px;
-      background: var(--menu-icon-color);
-      border-radius: 1px;
-      box-shadow: 0px 8px var(--menu-icon-color);
-      transform: translateY(-8px);
-      transition: 0.5s;
-    }
-    .menu--icon.active::before{
-      transform: rotate(-45deg);
-      box-shadow: 0 0 var(--menu-icon-color);
-    }
-  
-    .menu--icon::after{
-      position: absolute;
-      content: "";
-      width: 2rem;
-      height: 1px;
-      background: var(--menu-icon-color);
-      border-radius: 1px;
-      transform: translateY(8px);
-      transition: 0.5s;
-    }
-  
-  
-    .menu--icon.active::after{
-      transform: rotate(45deg);
-    }
-
-    .navigation .userBx .username{
-      white-space: nowrap;
-      color: #333;
-      margin-left: 1rem;
-      font-size: 1em;
-      font-weight: 700;
-    }
-    
-    .navigation .menu{
-        position: absolute;
-        top: 60px;
-        padding: 20px;
-        width: 100%;
-        height: calc(100% - 40px);
-       
-    }
-    
-    .navigation .menu li{
-        margin: 1.5rem 0;
-        list-style: none;
-    }
-
-    .navigation .menu li:hover a{
-      color: var(--secondary-color);
-    }
-    
-    .navigation .menu li a{
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        font-size: 1rem;
-        font-weight: 400;
-        gap: 1.5rem;
-        transition: 0.5s;
-        color: var(--acolor);
-    }
-    
+  .logo {
+    width: 8.5rem;
   }
 
-  
+  .nav--menu {
+    display: none;
+  }
+
+  .toggleBtn {
+    margin-right: 6rem;
+  }
+
+  .nav-contact-btn {
+    display: none;
+  }
+
+  .navigation {
+    position: fixed;
+    visibility: visible;
+    top: 10px;
+    right: 0.5rem;
+    margin-left: 0.5rem;
+    width: 80px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    transition: height 0.25s, width 0.25s;
+    transition-delay: 0s, 0.5s;
+    overflow: hidden;
+  }
+
+  .navigation.active {
+    width: calc(100% - 1rem);
+    height: calc(100vh - 1rem);
+    transition: width 0.25s, height 0.25s;
+    transition-delay: 0s, 0.5s;
+  }
+
+  .navigation .userBx {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s;
+    transition-delay: 0.25s;
+  }
+
+  .navigation.active .userBx {
+    width: calc(100% - 40px);
+    transition: 0s;
+    transition-delay: 0s;
+  }
+
+  .navigation .userBx .imgBx {
+    position: relative;
+    padding-top: 2px;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .navigation .userBx .imgBx img {
+    width: 100%;
+    height: 100%;
+    filter: saturate(180%) brightness(100%) contrast(150%);
+    object-fit: cover;
+  }
+
+  .menu--icon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .menu--icon::before {
+    position: absolute;
+    content: "";
+    width: 2rem;
+    height: 1px;
+    background: var(--menu-icon-color);
+    border-radius: 1px;
+    box-shadow: 0px 8px var(--menu-icon-color);
+    transform: translateY(-8px);
+    transition: 0.5s;
+  }
+
+  .menu--icon.active::before {
+    transform: rotate(-45deg);
+    box-shadow: 0 0 var(--menu-icon-color);
+  }
+
+  .menu--icon::after {
+    position: absolute;
+    content: "";
+    width: 2rem;
+    height: 1px;
+    background: var(--menu-icon-color);
+    border-radius: 1px;
+    transform: translateY(8px);
+    transition: 0.5s;
+  }
+
+
+  .menu--icon.active::after {
+    transform: rotate(45deg);
+  }
+
+  .navigation .userBx .username {
+    white-space: nowrap;
+    color: #333;
+    margin-left: 1rem;
+    font-size: 1em;
+    font-weight: 700;
+  }
+
+  .navigation .menu {
+    position: absolute;
+    top: 60px;
+    padding: 20px;
+    width: 100%;
+    height: calc(100% - 40px);
+
+  }
+
+  .navigation .menu li {
+    margin: 1.5rem 0;
+    list-style: none;
+  }
+
+  .navigation .menu li:hover a {
+    color: var(--secondary-color);
+  }
+
+  .navigation .menu li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    gap: 1.5rem;
+    transition: 0.5s;
+    color: var(--acolor);
+  }
+
+}
