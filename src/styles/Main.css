@@ -58,7 +58,7 @@
   width: 40px;
   height: 40px;
   margin-bottom: 1rem;
-  background: var(--primary-color);
+  background: rgb(71, 73, 77);
   border-radius: 4px;
   cursor: pointer;
 }

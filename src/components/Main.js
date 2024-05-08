@@ -45,11 +45,11 @@ function Main({ theme, isDarkMode }) {
           <h1
             style={{
               color: theme.dark.secondary,
-              textShadow: "0px -4px 4px rgba(255,255,255,.5)",
+              textShadow: "1px -2px 2px rgba(255,255,255, 1)",
               whiteSpace: "nowrap",
             }}
           >
-            Ken Ojukwu C.
+            Chibuzor Kennedy O.
           </h1>
         </div>
         <h2
@@ -67,7 +67,7 @@ function Main({ theme, isDarkMode }) {
           }}
           className="home-profile-desc"
         >
-          I manage and automate stuffs in the cloud using some interesting tools and technologies
+          I manage and automate stuffs in the cloud using some interesting tools and technologies which primarily include Docker, Terraform, Ansible, Kubernetes, and Jenkins.
         </p>
         <p
           style={{

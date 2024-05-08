@@ -10,8 +10,8 @@ const SkillModel = [
       <FaDocker
         style={{
           color: "#08D0F9",
-          width: "4rem",
-          height: "4rem",
+          width: "3rem",
+          height: "3rem",
         }}
       />
     ),
@@ -24,8 +24,8 @@ const SkillModel = [
       <SiTerraform
         style={{
           color: "#7D3AEB",
-          width: "3rem",
-          height: "3rem",
+          width: "2rem",
+          height: "2rem",
         }}
       />
     ),
@@ -38,8 +38,8 @@ const SkillModel = [
       <FaPython
         style={{
           color: "#3069DE",
-          width: "3rem",
-          height: "3rem",
+          width: "2rem",
+          height: "2rem",
         }}
       />
     ),
@@ -52,8 +52,8 @@ const SkillModel = [
       <SiKubernetes
         style={{
           color: "#3069DE",
-          width: "3rem",
-          height: "3rem",
+          width: "2rem",
+          height: "2rem",
         }}
       />
     ),
@@ -66,8 +66,8 @@ const SkillModel = [
       <SiAnsible
         style={{
           color: "#000",
-          width: "3rem",
-          height: "3rem",
+          width: "2rem",
+          height: "2rem",
         }}
       />
     ),
@@ -80,8 +80,8 @@ const SkillModel = [
       <SiNodedotjs
         style={{
           color: "#509941",
-          width: "3rem",
-          height: "3rem",
+          width: "2rem",
+          height: "2rem",
         }}
       />
     ),
@@ -93,9 +93,9 @@ const SkillModel = [
     icon: (
       <FaJenkins
         style={{
-          color: "rgba(255, 255, 255, 0.6)",
-          width: "3rem",
-          height: "3rem",
+          color: "grey",
+          width: "2rem",
+          height: "2rem",
         }}
       />
     ),

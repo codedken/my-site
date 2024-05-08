@@ -28,6 +28,8 @@
 .menu--item {
   text-decoration: none;
   font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
   transition: 0.5s;
 }
 
@@ -116,7 +118,7 @@
   border-radius: 0.5rem;
   border: none;
   font-family: "Ubuntu", sans-serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
   box-shadow: inset 4px -4px 5px rgba(0, 0, 0, 0.5),
